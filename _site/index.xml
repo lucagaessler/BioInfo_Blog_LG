@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Bioinfo Blog</title>
+<link>https://your-website-url.example.com/</link>
+<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<description>A blog built with Quarto</description>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Sun, 05 Oct 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Welcome To My Bioinformatics Blog</title>
+  <dc:creator>Luca Gaessler</dc:creator>
+  <link>https://your-website-url.example.com/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is the first post in a Quarto blog. Welcome!</p>
+<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <category>bioinfo</category>
+  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <pubDate>Sun, 05 Oct 2025 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Medical Bioinformatics Day 1</title>
+  <dc:creator>Luca Gaessler</dc:creator>
+  <link>https://your-website-url.example.com/posts/MedBioInfo_Day1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="medical-bioinformatics---day-1" class="level1">
+<h1>Medical Bioinformatics - Day 1</h1>
+<p>Welcome to my first post about the medical bioinformatics course!</p>
+<section id="what-i-learned-today" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned-today">What I Learned Today</h2>
+<p>Add your content here about what you learned on day 1.</p>
+</section>
+<section id="key-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
+<ul>
+<li>Concept 1</li>
+<li>Concept 2</li>
+<li>Concept 3</li>
+</ul>
+</section>
+<section id="code-examples" class="level2">
+<h2 class="anchored" data-anchor-id="code-examples">Code Examples</h2>
+<pre class="{bash}"><code># Add any bash commands from the course
+echo "Hello, medical bioinformatics!"</code></pre>
+</section>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
+<p>Write your thoughts and reflections about the material covered.</p>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>What do you plan to explore or learn next?</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>course</category>
+  <category>medbioinfo</category>
+  <category>learning</category>
+  <guid>https://your-website-url.example.com/posts/MedBioInfo_Day1/</guid>
+  <pubDate>Sun, 05 Oct 2025 22:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

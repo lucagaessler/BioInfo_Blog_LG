@@ -1,0 +1,36 @@
+---
+title: "Medical Bioinformatics Day 1"
+author: "Luca Gaessler"
+date: "2025-10-06"
+categories: [course, medbioinfo, learning]
+description: "First day of medical bioinformatics course"
+---
+
+# Medical Bioinformatics - Day 1
+
+Welcome to my first post about the medical bioinformatics course!
+
+## What I Learned Today
+
+Add your content here about what you learned on day 1.
+
+## Key Concepts
+
+- Concept 1
+- Concept 2
+- Concept 3
+
+## Code Examples
+
+```{bash}
+# Add any bash commands from the course
+echo "Hello, medical bioinformatics!"
+```
+
+## Reflections
+
+Write your thoughts and reflections about the material covered.
+
+## Next Steps
+
+What do you plan to explore or learn next?

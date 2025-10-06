@@ -7,13 +7,6 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/MedBioInfo_Day1/index.html",
-    "href": "posts/MedBioInfo_Day1/index.html",
-    "title": "Applied Bioinformatics Day 1",
-    "section": "",
-    "text": "Collaborating in GitHub\nQuarto Blogs\nGitHub Actions"
-  },
-  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Bioinformatics Blog",
@@ -26,5 +19,12 @@
     "title": "Bioinfo Blog",
     "section": "",
     "text": "Welcome To My Bioinformatics Blog\n\n\n\nnews\n\nbioinfo\n\n\n\n\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 1\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html",
+    "href": "posts/MedBioInfo_Day1/index.html",
+    "title": "Applied Bioinformatics Day 1",
+    "section": "",
+    "text": "Collaborating in GitHub\nQuarto Blogs\nGitHub Actions\n\nTest Text"
   }
 ]

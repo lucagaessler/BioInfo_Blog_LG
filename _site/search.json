@@ -11,7 +11,7 @@
     "href": "posts/MedBioInfo_Day1/index.html",
     "title": "Applied Bioinformatics Day 1",
     "section": "",
-    "text": "Collaborating in GitHub\nQuarto Blogs\nGitHub Actions\n\nTest Text"
+    "text": "Key Concepts I Learned Today\n\nCollaborating in GitHub\nQuarto Blogs\nGitHub Actions\n\n\nCollaborating in GitHub\nToday’s practical session was initiated by a group task. The goal was to create an ordered list of all participant’s names. An easy task at first but not if you consider the following rule: “Each student can only write their own name in a stand-alone file.”. This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on… The final workflow turned out to be less structured but we still managed to come up with the full list in the end.\nMerging the document looked as follows:\ngit pull # update local repository\ngit checkout [branch_1] # switch to branch that will be merged into\ngit merge [branch_2] # merge the two branches\n# solve conflicts\ngit add # stage changes\ngit commit # commit changes\ngit push # add changes to remote repository\n\n\nQuarto Blogs\nQuarto has been developed for literate programming, meaning that it can combine code with markdown text. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, “Applied Bioinformatics”, in a blog format - one post for each day. Of course version-controlled via Git(Hub)!\n\n\nGitHub Actions\nEach member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions.\n\n\n\nReflections\nIn conclusion, the first day was a great start into the course! Now that we have laid the foundation for collaborative work via GitHub as well as our primary medium of documentation, the Quarto Blog, we are ready to dive into the complex topics of Bioinformatics!\n\n\nNext Steps\nNext, I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!\nThanks for listening!"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -26,5 +26,26 @@
     "title": "Bioinfo Blog",
     "section": "",
     "text": "Welcome To My Bioinformatics Blog\n\n\n\nnews\n\nbioinfo\n\n\n\n\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 1\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html#collaborating-in-github",
+    "href": "posts/MedBioInfo_Day1/index.html#collaborating-in-github",
+    "title": "Applied Bioinformatics Day 1",
+    "section": "",
+    "text": "Today’s practical session was initiated by a group task. The goal was to create an ordered list of all participant’s names. An easy task at first but not if you consider the following rule: “Each student can only write their own name in a stand-alone file.”. This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on… The final workflow turned out to be less structured but we still managed to come up with the full list in the end.\nMerging the document looked as follows:\ngit pull # update local repository\ngit checkout [branch_1] # switch to branch that will be merged into\ngit merge [branch_2] # merge the two branches\n# solve conflicts\ngit add # stage changes\ngit commit # commit changes\ngit push # add changes to remote repository"
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html#quarto-blogs",
+    "href": "posts/MedBioInfo_Day1/index.html#quarto-blogs",
+    "title": "Applied Bioinformatics Day 1",
+    "section": "",
+    "text": "Quarto has been developed for literate programming, meaning that it can combine code with markdown text. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, “Applied Bioinformatics”, in a blog format - one post for each day. Of course version-controlled via Git(Hub)!"
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html#github-actions",
+    "href": "posts/MedBioInfo_Day1/index.html#github-actions",
+    "title": "Applied Bioinformatics Day 1",
+    "section": "",
+    "text": "Each member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions."
   }
 ]

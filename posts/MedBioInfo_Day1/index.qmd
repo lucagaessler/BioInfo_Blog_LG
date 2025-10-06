@@ -10,20 +10,36 @@ description: "Hosted by Sweden's School for Medical Bioinformatics"
 
 - **Collaborating in GitHub**
 - **Quarto Blogs**
-- **GitHub Actions**
+- **GitHub Pages & Actions**
 
-Test Text
+### Collaborating in GitHub
 
-## Collaborating in GitHub
+Today's practical session was initiated by a group task. The goal was to create an ordered list of all participant's names. An easy task at first but not if you consider the following rule: "Each student can only write their own name in a stand-alone file.". This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on... The final workflow turned out to be less structured but we still managed to come up with the full list in the end.
 
-## Quarto Blogs
+Merging the document looked as follows:
 
-## GitHub Actions
+```bash
+git pull # update local repository
+git checkout [branch_1] # switch to branch that will be merged into
+git merge [branch_2] # merge the two branches
+# solve conflicts
+git add # stage changes
+git commit # commit changes
+git push # add changes to remote repository
+```
+
+### Quarto Blogs
+Quarto has been developed for literate programming, meaning that it can combine code with markdown text. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, "Applied Bioinformatics", in a blog format - one post for each day. Of course version-controlled via Git(Hub)!
+
+### GitHub Pages & Actions
+Each member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions.
 
 # Reflections
 
-Write your thoughts and reflections about the material covered.
+In conclusion, the first day was a great start into the course! Now that we have laid the foundation for collaborative work via GitHub as well as our primary medium of documentation, the Quarto Blog, we are ready to dive into the complex topics of Bioinformatics!
 
 # Next Steps
 
-What do you plan to explore or learn next?
+Next, I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!
+
+**Thanks for reading!**

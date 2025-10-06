@@ -7,6 +7,20 @@
     "text": "About this blog"
   },
   {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Bioinformatics Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bioinfo Blog",
+    "section": "",
+    "text": "Welcome To My Bioinformatics Blog\n\n\n\nnews\n\nbioinfo\n\n\n\n\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nMedical Bioinformatics Day 1\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nFirst day of medical bioinformatics course\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/MedBioInfo_Day1/index.html",
     "href": "posts/MedBioInfo_Day1/index.html",
     "title": "Medical Bioinformatics Day 1",
@@ -47,19 +61,5 @@
     "title": "Medical Bioinformatics Day 1",
     "section": "",
     "text": "What do you plan to explore or learn next?"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Bioinformatics Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Bioinfo Blog",
-    "section": "",
-    "text": "Welcome To My Bioinformatics Blog\n\n\n\nnews\n\nbioinfo\n\n\n\n\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nMedical Bioinformatics Day 1\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nFirst day of medical bioinformatics course\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\nNo matching items"
   }
 ]

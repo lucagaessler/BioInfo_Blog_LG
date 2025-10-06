@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html",
+    "href": "posts/MedBioInfo_Day1/index.html",
+    "title": "Medical Bioinformatics Day 1",
+    "section": "",
+    "text": "Welcome to my first post about the medical bioinformatics course!\n\n\nAdd your content here about what you learned on day 1.\n\n\n\n\nConcept 1\nConcept 2\nConcept 3\n\n\n\n\n# Add any bash commands from the course\necho \"Hello, medical bioinformatics!\"\n\n\n\nWrite your thoughts and reflections about the material covered.\n\n\n\nWhat do you plan to explore or learn next?"
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html#what-i-learned-today",
+    "href": "posts/MedBioInfo_Day1/index.html#what-i-learned-today",
+    "title": "Medical Bioinformatics Day 1",
+    "section": "",
+    "text": "Add your content here about what you learned on day 1."
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html#key-concepts",
+    "href": "posts/MedBioInfo_Day1/index.html#key-concepts",
+    "title": "Medical Bioinformatics Day 1",
+    "section": "",
+    "text": "Concept 1\nConcept 2\nConcept 3"
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html#code-examples",
+    "href": "posts/MedBioInfo_Day1/index.html#code-examples",
+    "title": "Medical Bioinformatics Day 1",
+    "section": "",
+    "text": "# Add any bash commands from the course\necho \"Hello, medical bioinformatics!\""
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html#reflections",
+    "href": "posts/MedBioInfo_Day1/index.html#reflections",
+    "title": "Medical Bioinformatics Day 1",
+    "section": "",
+    "text": "Write your thoughts and reflections about the material covered."
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day1/index.html#next-steps",
+    "href": "posts/MedBioInfo_Day1/index.html#next-steps",
+    "title": "Medical Bioinformatics Day 1",
+    "section": "",
+    "text": "What do you plan to explore or learn next?"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Bioinformatics Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bioinfo Blog",
+    "section": "",
+    "text": "Welcome To My Bioinformatics Blog\n\n\n\nnews\n\nbioinfo\n\n\n\n\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nMedical Bioinformatics Day 1\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nFirst day of medical bioinformatics course\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\nNo matching items"
+  }
+]

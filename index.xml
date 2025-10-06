@@ -10,7 +10,7 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Mon, 06 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 05 Oct 2025 22:00:00 GMT</lastBuildDate>
 <item>
   <title>Welcome To My Bioinformatics Blog</title>
   <dc:creator>Luca Gaessler</dc:creator>
@@ -31,7 +31,7 @@
   <category>news</category>
   <category>bioinfo</category>
   <guid>https://your-website-url.example.com/posts/welcome/</guid>
-  <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 05 Oct 2025 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Applied Bioinformatics Day 1</title>
@@ -76,7 +76,7 @@
   <category>medbioinfo</category>
   <category>learning</category>
   <guid>https://your-website-url.example.com/posts/MedBioInfo_Day1/</guid>
-  <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 05 Oct 2025 22:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -1,36 +1,27 @@
 ---
-title: "Medical Bioinformatics Day 1"
+title: "Applied Bioinformatics Day 1"
 author: "Luca Gaessler"
 date: "2025-10-06"
 categories: [course, medbioinfo, learning]
-description: "First day of medical bioinformatics course"
+description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---
 
-# Medical Bioinformatics - Day 1
+# Key Concepts I Learned Today
 
-Welcome to my first post about the medical bioinformatics course!
+- **Collaborating in GitHub**
+- **Quarto Blogs**
+- **GitHub Actions**
 
-## What I Learned Today
+## Collaborating in GitHub
 
-Add your content here about what you learned on day 1.
+## Quarto Blogs
 
-## Key Concepts
+## GitHub Actions
 
-- Concept 1
-- Concept 2
-- Concept 3
-
-## Code Examples
-
-```{bash}
-# Add any bash commands from the course
-echo "Hello, medical bioinformatics!"
-```
-
-## Reflections
+# Reflections
 
 Write your thoughts and reflections about the material covered.
 
-## Next Steps
+# Next Steps
 
 What do you plan to explore or learn next?

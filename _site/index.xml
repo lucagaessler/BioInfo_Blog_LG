@@ -34,7 +34,7 @@
   <pubDate>Sun, 05 Oct 2025 22:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Medical Bioinformatics Day 1</title>
+  <title>Applied Bioinformatics Day 1</title>
   <dc:creator>Luca Gaessler</dc:creator>
   <link>https://your-website-url.example.com/posts/MedBioInfo_Day1/</link>
   <description><![CDATA[ 
@@ -43,36 +43,32 @@
 
 
 
-<section id="medical-bioinformatics---day-1" class="level1">
-<h1>Medical Bioinformatics - Day 1</h1>
-<p>Welcome to my first post about the medical bioinformatics course!</p>
-<section id="what-i-learned-today" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-learned-today">What I Learned Today</h2>
-<p>Add your content here about what you learned on day 1.</p>
-</section>
-<section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
+<section id="key-concepts-i-learned-today" class="level1">
+<h1>Key Concepts I Learned Today</h1>
 <ul>
-<li>Concept 1</li>
-<li>Concept 2</li>
-<li>Concept 3</li>
+<li><strong>Collaborating in GitHub</strong></li>
+<li><strong>Quarto Blogs</strong></li>
+<li><strong>GitHub Actions</strong></li>
 </ul>
+<section id="collaborating-in-github" class="level2">
+<h2 class="anchored" data-anchor-id="collaborating-in-github">Collaborating in GitHub</h2>
 </section>
-<section id="code-examples" class="level2">
-<h2 class="anchored" data-anchor-id="code-examples">Code Examples</h2>
-<pre class="{bash}"><code># Add any bash commands from the course
-echo "Hello, medical bioinformatics!"</code></pre>
+<section id="quarto-blogs" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-blogs">Quarto Blogs</h2>
 </section>
-<section id="reflections" class="level2">
-<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
+<section id="github-actions" class="level2">
+<h2 class="anchored" data-anchor-id="github-actions">GitHub Actions</h2>
+</section>
+</section>
+<section id="reflections" class="level1">
+<h1>Reflections</h1>
 <p>Write your thoughts and reflections about the material covered.</p>
 </section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<section id="next-steps" class="level1">
+<h1>Next Steps</h1>
 <p>What do you plan to explore or learn next?</p>
 
 
-</section>
 </section>
 
  ]]></description>

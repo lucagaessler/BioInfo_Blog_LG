@@ -1,8 +1,8 @@
 {
-  "hash": "4a4d47f76956aa59550d192e2bd14b48",
+  "hash": "3e9f18e5f561e16369e0ed0a85729a41",
   "result": {
     "engine": "jupyter",
-    "markdown": "---\ntitle: \"Medical Bioinformatics Day 1\"\nauthor: \"Luca Gaessler\"\ndate: \"2025-10-06\"\ncategories: [course, medbioinfo, learning]\ndescription: \"First day of medical bioinformatics course\"\n---\n\n# Medical Bioinformatics - Day 1\n\nWelcome to my first post about the medical bioinformatics course!\n\n## What I Learned Today\n\nAdd your content here about what you learned on day 1.\n\n## Key Concepts\n\n- Concept 1\n- Concept 2\n- Concept 3\n\n## Code Examples\n\n```{bash}\n# Add any bash commands from the course\necho \"Hello, medical bioinformatics!\"\n```\n\n## Reflections\n\nWrite your thoughts and reflections about the material covered.\n\n## Next Steps\n\nWhat do you plan to explore or learn next?\n\n",
+    "markdown": "---\ntitle: \"Applied Bioinformatics Day 1\"\nauthor: \"Luca Gaessler\"\ndate: \"2025-10-06\"\ncategories: [course, medbioinfo, learning]\ndescription: \"Hosted by Sweden's MedBioInfo School\"\n---\n\n# Key Concepts I Learned Today\n\n- Concept 1\n- Concept 2\n- Concept 3\n\n# Code Examples\n\n```{bash}\n# Add any bash commands from the course\necho \"Hello, medical bioinformatics!\"\n```\n\n# Reflections\n\nWrite your thoughts and reflections about the material covered.\n\n# Next Steps\n\nWhat do you plan to explore or learn next?\n\n",
     "supporting": [
       "index_files"
     ],

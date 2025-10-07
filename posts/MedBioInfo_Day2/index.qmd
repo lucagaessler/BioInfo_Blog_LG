@@ -1,0 +1,26 @@
+---
+title: "Applied Bioinformatics Day 2"
+author: "Luca Gaessler"
+date: "2025-10-07"
+categories: [course, medbioinfo, learning]
+description: "Hosted by Sweden's School for Medical Bioinformatics"
+---
+
+# Key Concepts I Learned Today
+
+- **Coding Environments**
+- **Containerization**
+
+### Coding Environments
+Placeholder
+
+### Containerization
+Placeholder
+
+# Reflections
+Placeholder
+
+# Next Steps
+Placeholder
+
+**Thanks for reading!**

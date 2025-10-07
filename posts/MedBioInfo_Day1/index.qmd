@@ -13,7 +13,6 @@ description: "Hosted by Sweden's School for Medical Bioinformatics"
 - **GitHub Pages & Actions**
 
 ### Collaborating in GitHub
-
 Today's practical session was initiated by a group task. The goal was to create an ordered list of all participant's names. An easy task at first but not if you consider the following rule: "Each student can only write their own name in a stand-alone file.". This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on... The final workflow turned out to be less structured but we still managed to come up with the full list in the end.
 
 Merging the document looked as follows:
@@ -35,11 +34,9 @@ Quarto has been developed for literate programming, meaning that it can combine 
 Each member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions.
 
 # Reflections
-
 In conclusion, the first day was a great start into the course! Now that we have laid the foundation for collaborative work via GitHub as well as our primary medium of documentation, the Quarto Blog, we are ready to dive into the complex topics of Bioinformatics!
 
 # Next Steps
-
 Next, I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!
 
 **Thanks for reading!**

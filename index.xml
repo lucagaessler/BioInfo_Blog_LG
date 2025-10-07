@@ -10,7 +10,51 @@
 <atom:link href="https://lucagaessler.github.io/BioInfo_Blog_LG/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Mon, 06 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 07 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Applied Bioinformatics Day 2</title>
+  <dc:creator>Luca Gaessler</dc:creator>
+  <link>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="key-concepts-i-learned-today" class="level1">
+<h1>Key Concepts I Learned Today</h1>
+<ul>
+<li><strong>Coding Environments</strong></li>
+<li><strong>Containerization</strong></li>
+</ul>
+<section id="coding-environments" class="level3">
+<h3 class="anchored" data-anchor-id="coding-environments">Coding Environments</h3>
+<p>Placeholder</p>
+</section>
+<section id="containerization" class="level3">
+<h3 class="anchored" data-anchor-id="containerization">Containerization</h3>
+<p>Placeholder</p>
+</section>
+</section>
+<section id="reflections" class="level1">
+<h1>Reflections</h1>
+<p>Placeholder</p>
+</section>
+<section id="next-steps" class="level1">
+<h1>Next Steps</h1>
+<p>Placeholder</p>
+<p><strong>Thanks for reading!</strong></p>
+
+
+</section>
+
+ ]]></description>
+  <category>course</category>
+  <category>medbioinfo</category>
+  <category>learning</category>
+  <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day2/</guid>
+  <pubDate>Tue, 07 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Welcome To My Bioinformatics Blog</title>
   <dc:creator>Luca Gaessler</dc:creator>

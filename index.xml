@@ -10,7 +10,62 @@
 <atom:link href="https://lucagaessler.github.io/BioInfo_Blog_LG/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Tue, 07 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 08 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Applied Bioinformatics Day 3</title>
+  <dc:creator>Luca Gaessler</dc:creator>
+  <link>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="key-concepts-i-learned-today" class="level1">
+<h1>Key Concepts I Learned Today</h1>
+<ul>
+<li><strong>Nextflow</strong></li>
+<li><strong>nf-core</strong></li>
+</ul>
+<section id="nextflow" class="level3">
+<h3 class="anchored" data-anchor-id="nextflow">Nextflow</h3>
+<p>Nextflow is a tool to connect different parts of your analysis. While this might trigger reactions like “I can run my scripts myself” and “Nice to have”, the use of workflow managers is real and multifold. Nextflow scripts not only lower manual efforts, and thereby the possibility of human erros, but also enhance analytical scalability and reproducibility. When scripts are run over many samples, high-performance clusters are essential. When transferring scripts from local computers to clusters, Nexflow is a game-changer. It always keeps the functional logic of a workflow separate from its execution, meaning that you only have to exchange your local for appropriate server parameters to scale up your analysis. Additionally, Nextflow inherently incorporates version control and containerization, which - as I told about in the previous posts - are real boosters of science reproducibility.</p>
+<p>A very useful function in Nextflow is the “resume” option. Imagine your pipeline has a bug right after a computationally expensive calculation. After fixing the bug, “resume” allows you to re-run the now working pipeline but all unchanged steps are skipped and their results recovered from cache instead.</p>
+<div id="fig-id" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/Nextflow_scheme.png" class="quarto-figure quarto-figure-center figure-img" style="width:80.0%;height:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="nf-core" class="level3">
+<h3 class="anchored" data-anchor-id="nf-core">nf-core</h3>
+<p>Building up on Nextflow, nf-core is a web-platform that provides curated &amp; ready-to-use bioinformatic pipelines. The platform is largely community-driven. Volunteers create and validate the provided pipelines (at the time of this post 139x) - the code is freely available on GitHub. Judging form my experience, most of the available pipelines are built for data processing tasks, while the focus lies less on downstream biological analyses. A very prominent use-case of nf-core is their rnaseq pipeline to generate count matrices form raw FASTQ files, including quality control vias FastQC.</p>
+</section>
+</section>
+<section id="reflections" class="level1">
+<h1>Reflections</h1>
+<p>Although I currently see myself more as data scientist with a focus on biological analyses, workflow managers and off-the-shelf pipelines will definitely play an important part in the future of my PhD projects. Biological datasets are getting larger and larger, which calls for increased scalability and the need for high-performance computing clusters. All of this is facilitated by tools like Nextflow and will definitely change the way I work right now.</p>
+</section>
+<section id="next-steps" class="level1">
+<h1>Next Steps</h1>
+<p>While we have only scratched the surface of bioinformatic pipelines today, tomorrow will bring more hands-on tasks on Nextflow as well as the use of nf-core pipelines.</p>
+<p><strong>Thanks for reading!</strong></p>
+
+
+</section>
+
+ ]]></description>
+  <category>course</category>
+  <category>medbioinfo</category>
+  <category>learning</category>
+  <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/</guid>
+  <pubDate>Wed, 08 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Applied Bioinformatics Day 2</title>
   <dc:creator>Luca Gaessler</dc:creator>

@@ -21,8 +21,8 @@
 
 
 
-<section id="key-concepts-i-learned-today" class="level1">
-<h1>Key Concepts I Learned Today</h1>
+<section id="key-concepts-i-learned-today" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-i-learned-today">Key Concepts I Learned Today</h2>
 <ul>
 <li><strong>Nextflow</strong></li>
 <li><strong>nf-core</strong></li>
@@ -47,12 +47,12 @@ Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which c
 <p>Building up on Nextflow, nf-core is a web-platform that provides curated &amp; ready-to-use bioinformatic pipelines. The platform is largely community-driven. Volunteers create and validate the provided pipelines (at the time of this post 139x) - the code is freely available on GitHub. Judging form my experience, most of the available pipelines are built for data processing tasks, while the focus lies less on downstream biological analyses. A very prominent use-case of nf-core is their rnaseq pipeline to generate count matrices form raw FASTQ files, including quality control vias FastQC.</p>
 </section>
 </section>
-<section id="reflections" class="level1">
-<h1>Reflections</h1>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
 <p>Although I currently see myself more as data scientist with a focus on biological analyses, workflow managers and off-the-shelf pipelines will definitely play an important part in the future of my PhD projects. Biological datasets are getting larger and larger, which calls for increased scalability and the need for high-performance computing clusters. All of this is facilitated by tools like Nextflow and will definitely change the way I work right now.</p>
 </section>
-<section id="next-steps" class="level1">
-<h1>Next Steps</h1>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
 <p>While we have only scratched the surface of bioinformatic pipelines today, tomorrow will bring more hands-on tasks on Nextflow as well as the use of nf-core pipelines.</p>
 <p><strong>Thanks for reading!</strong></p>
 
@@ -76,8 +76,8 @@ Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which c
 
 
 
-<section id="key-concepts-i-learned-today" class="level1">
-<h1>Key Concepts I Learned Today</h1>
+<section id="key-concepts-i-learned-today" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-i-learned-today">Key Concepts I Learned Today</h2>
 <ul>
 <li><strong>Coding Environments</strong></li>
 <li><strong>Containerization</strong></li>
@@ -153,12 +153,12 @@ font-style: inherit;">#outside</span></span></code></pre></div></div>
 <p>It is possible to build your own container, giving you all the power over its operating system, dependencies, etc. Still, this task is often computationally extensive and in most cases, a suitable container with the desired tool is already available to download from the web.</p>
 </section>
 </section>
-<section id="reflections" class="level1">
-<h1>Reflections</h1>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
 <p>Naturally, there is no perfect solution among the two approaches and both have their Pros &amp; Cons. While environments like Pixi let you interact with outside directories more easily than containers, tools like Docker provide you with a higher degree of control over the conditions in which your analyses take place. In the end, it is all about finding a tool that balances outcome and effort according to the situation. The important part is to increase the reproducibility of your science, and both tools are a valuable addition for that.</p>
 </section>
-<section id="next-steps" class="level1">
-<h1>Next Steps</h1>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
 <p>Tomorrow will be all about bioinformatic pipelines and how to built them! Stay tuned for my next post, which will be about…</p>
 <p>Netxflow!</p>
 <p><strong>Thanks for reading!</strong></p>
@@ -205,8 +205,8 @@ font-style: inherit;">#outside</span></span></code></pre></div></div>
 
 
 
-<section id="key-concepts-i-learned-today" class="level1">
-<h1>Key Concepts I Learned Today</h1>
+<section id="key-concepts-i-learned-today" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-i-learned-today">Key Concepts I Learned Today</h2>
 <ul>
 <li><strong>Collaborating in GitHub</strong></li>
 <li><strong>Quarto Blogs</strong></li>
@@ -271,12 +271,12 @@ font-style: inherit;"># add changes to remote repository</span></span></code></p
 <p>Each member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions.</p>
 </section>
 </section>
-<section id="reflections" class="level1">
-<h1>Reflections</h1>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
 <p>In conclusion, the first day was a great start into the course! Now that we have laid the foundation for collaborative work via GitHub as well as our primary medium of documentation, the Quarto Blog, we are ready to dive into the complex topics of Bioinformatics!</p>
 </section>
-<section id="next-steps" class="level1">
-<h1>Next Steps</h1>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
 <p>Next, I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!</p>
 <p><strong>Thanks for reading!</strong></p>
 

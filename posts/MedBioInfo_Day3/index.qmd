@@ -6,7 +6,7 @@ categories: [course, medbioinfo, learning]
 description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---
 
-# Key Concepts I Learned Today
+## Key Concepts I Learned Today
 
 - **Nextflow**
 - **nf-core**
@@ -21,10 +21,10 @@ A very useful function in Nextflow is the "resume" option. Imagine your pipeline
 ### nf-core
 Building up on Nextflow, nf-core is a web-platform that provides curated & ready-to-use bioinformatic pipelines. The platform is largely community-driven. Volunteers create and validate the provided pipelines (at the time of this post 139x) - the code is freely available on GitHub. Judging form my experience, most of the available pipelines are built for data processing tasks, while the focus lies less on downstream biological analyses. A very prominent use-case of nf-core is their rnaseq pipeline to generate count matrices form raw FASTQ files, including quality control vias FastQC.
 
-# Reflections
+## Reflections
 Although I currently see myself more as data scientist with a focus on biological analyses, workflow managers and off-the-shelf pipelines will definitely play an important part in the future of my PhD projects. Biological datasets are getting larger and larger, which calls for increased scalability and the need for high-performance computing clusters. All of this is facilitated by tools like Nextflow and will definitely change the way I work right now.
 
-# Next Steps
+## Next Steps
 While we have only scratched the surface of bioinformatic pipelines today, tomorrow will bring more hands-on tasks on Nextflow as well as the use of nf-core pipelines.
 
 **Thanks for reading!**

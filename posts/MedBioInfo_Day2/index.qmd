@@ -6,7 +6,7 @@ categories: [course, medbioinfo, learning]
 description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---
 
-# Key Concepts I Learned Today
+## Key Concepts I Learned Today
 
 - **Coding Environments**
 - **Containerization**
@@ -43,10 +43,10 @@ apptainer exec [container] [command] #outside
 
 It is possible to build your own container, giving you all the power over its operating system, dependencies, etc. Still, this task is often computationally extensive and in most cases, a suitable container with the desired tool is already available to download from the web.
 
-# Reflections
+## Reflections
 Naturally, there is no perfect solution among the two approaches and both have their Pros & Cons. While environments like Pixi let you interact with outside directories more easily than containers, tools like Docker provide you with a higher degree of control over the conditions in which your analyses take place. In the end, it is all about finding a tool that balances outcome and effort according to the situation. The important part is to increase the reproducibility of your science, and both tools are a valuable addition for that.
 
-# Next Steps
+## Next Steps
 Tomorrow will be all about bioinformatic pipelines and how to built them! Stay tuned for my next post, which will be about...
 
 Netxflow!

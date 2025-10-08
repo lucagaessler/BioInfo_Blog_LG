@@ -6,7 +6,7 @@ categories: [course, medbioinfo, learning]
 description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---
 
-# Key Concepts I Learned Today
+## Key Concepts I Learned Today
 
 - **Collaborating in GitHub**
 - **Quarto Blogs**
@@ -33,10 +33,10 @@ Quarto has been developed for literate programming, meaning that it can combine 
 ### GitHub Pages & Actions
 Each member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions.
 
-# Reflections
+## Reflections
 In conclusion, the first day was a great start into the course! Now that we have laid the foundation for collaborative work via GitHub as well as our primary medium of documentation, the Quarto Blog, we are ready to dive into the complex topics of Bioinformatics!
 
-# Next Steps
+## Next Steps
 Next, I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!
 
 **Thanks for reading!**

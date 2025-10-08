@@ -16,7 +16,7 @@ Nextflow is a tool to connect different parts of your analysis. While this might
 
 A very useful function in Nextflow is the "resume" option. Imagine your pipeline has a bug right after a computationally expensive calculation. After fixing the bug, "resume" allows you to re-run the now working pipeline but all unchanged steps are skipped and their results recovered from cache instead. 
 
-![**Basic Nextflow Archictecture.** Processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages.](Nextflow_scheme.png){#fig-id width=80% height=80% fig-align="center"}
+![**Basic Nextflow Archictecture.** Processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages. Adapted from https://carpentries-incubator.github.io/workflows-nextflow/aio.html (last visit: 08/10/2025)](Nextflow_scheme.png){#fig-id width=80% height=80% fig-align="center"}
 
 ### nf-core
 Building up on Nextflow, nf-core is a web-platform that provides curated & ready-to-use bioinformatic pipelines. The platform is largely community-driven. Volunteers create and validate the provided pipelines (at the time of this post 139x) - the code is freely available on GitHub. Judging form my experience, most of the available pipelines are built for data processing tasks, while the focus lies less on downstream biological analyses. A very prominent use-case of nf-core is their rnaseq pipeline to generate count matrices form raw FASTQ files, including quality control vias FastQC.

@@ -37,7 +37,7 @@
 <img src="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/Nextflow_scheme.png" class="quarto-figure quarto-figure-center figure-img" style="width:80.0%;height:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages.
+Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages. Adapted from https://carpentries-incubator.github.io/workflows-nextflow/aio.html (last visit: 08/10/2025)
 </figcaption>
 </figure>
 </div>

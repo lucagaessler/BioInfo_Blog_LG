@@ -1,0 +1,26 @@
+---
+title: "Applied Bioinformatics Day 4"
+author: "Luca Gaessler"
+date: "2025-10-09"
+categories: [course, medbioinfo, learning]
+description: "Hosted by Sweden's School for Medical Bioinformatics"
+---
+
+## Key Concepts I Learned Today
+
+- **Running a Nextflow script**
+- **Running a nf-core pipeline**
+
+### Running a Nextflow script
+Placeholder
+
+### Running a nf-core pipeline
+Placeholder
+
+## Reflections
+Placeholder
+
+## Next Steps
+Placeholder
+
+**Thanks for reading!**

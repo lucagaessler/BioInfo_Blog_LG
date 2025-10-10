@@ -10,7 +10,42 @@
 <atom:link href="https://lucagaessler.github.io/BioInfo_Blog_LG/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Thu, 09 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 10 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Applied Bioinformatics Day 5</title>
+  <dc:creator>Luca Gaessler</dc:creator>
+  <link>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day5/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="key-concepts-i-learned-today" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-i-learned-today">Key Concepts I Learned Today</h2>
+<ul>
+<li><strong>Advanced ggplot</strong></li>
+</ul>
+<section id="advanced-ggplot" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-ggplot">Advanced ggplot</h3>
+<p>Placeholder</p>
+</section>
+</section>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
+<p>Placeholder</p>
+<p><strong>Thanks for reading!</strong></p>
+
+
+</section>
+
+ ]]></description>
+  <category>course</category>
+  <category>medbioinfo</category>
+  <category>learning</category>
+  <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day5/</guid>
+  <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Applied Bioinformatics Day 4</title>
   <dc:creator>Luca Gaessler</dc:creator>

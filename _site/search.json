@@ -88,14 +88,14 @@
     "href": "posts/MedBioInfo_Day4/index.html",
     "title": "Applied Bioinformatics Day 4",
     "section": "",
-    "text": "Running a Nextflow script\nRunning a nf-core pipeline\n\n\n\nPlaceholder\n\n\n\nPlaceholder"
+    "text": "Running a Nextflow script\nRunning an nf-core pipeline\n\n\n\nToday was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!\nImportantly, each process module has the following structure:\nprocess INDEX {\n    input:\n\n    optional container\n\n    output:\n\n    script:\n    \"\"\"\n    [bash code, can refer to a script in another language]\n    \"\"\"\n}\nThese processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):\nworkflow {\n\n    index_ch = INDEX(params.transcriptome_file)\n    quant_ch = QUANTIFICATION(index_ch, read_pairs_ch)\n    fastqc_ch = FASTQC(read_pairs_ch)\n    MULTIQC(quant_ch.mix(fastqc_ch).collect())\n\n}\nOnce everything is in place, the Nextflow command is straight-forward. If you work on a cluster, do not forget your .config file!\nnextflow run script.nf\n\n\n\nOf course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:\n\n\n\n\n\n\nFigure 1: nf-core RNAseq Pipeline. Schematic representation of the RNAseq pipeline from nf-core. Different stages and possible quantification methods are highlighted. Adapted from https://nf-co.re/rnaseq/3.14.0/ (last visit: 10/10/2025)"
   },
   {
     "objectID": "posts/MedBioInfo_Day4/index.html#key-concepts-i-learned-today",
     "href": "posts/MedBioInfo_Day4/index.html#key-concepts-i-learned-today",
     "title": "Applied Bioinformatics Day 4",
     "section": "",
-    "text": "Running a Nextflow script\nRunning a nf-core pipeline\n\n\n\nPlaceholder\n\n\n\nPlaceholder"
+    "text": "Running a Nextflow script\nRunning an nf-core pipeline\n\n\n\nToday was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!\nImportantly, each process module has the following structure:\nprocess INDEX {\n    input:\n\n    optional container\n\n    output:\n\n    script:\n    \"\"\"\n    [bash code, can refer to a script in another language]\n    \"\"\"\n}\nThese processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):\nworkflow {\n\n    index_ch = INDEX(params.transcriptome_file)\n    quant_ch = QUANTIFICATION(index_ch, read_pairs_ch)\n    fastqc_ch = FASTQC(read_pairs_ch)\n    MULTIQC(quant_ch.mix(fastqc_ch).collect())\n\n}\nOnce everything is in place, the Nextflow command is straight-forward. If you work on a cluster, do not forget your .config file!\nnextflow run script.nf\n\n\n\nOf course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:\n\n\n\n\n\n\nFigure 1: nf-core RNAseq Pipeline. Schematic representation of the RNAseq pipeline from nf-core. Different stages and possible quantification methods are highlighted. Adapted from https://nf-co.re/rnaseq/3.14.0/ (last visit: 10/10/2025)"
   },
   {
     "objectID": "posts/MedBioInfo_Day4/index.html#reflections",
@@ -109,7 +109,7 @@
     "href": "posts/MedBioInfo_Day4/index.html#next-steps",
     "title": "Applied Bioinformatics Day 4",
     "section": "Next Steps",
-    "text": "Next Steps\nPlaceholder\nThanks for reading!"
+    "text": "Next Steps\nTomorrow is the last course day with a ggplot2 session as well as the ooportunity to give feedback.\nThanks for reading!"
   },
   {
     "objectID": "posts/MedBioInfo_Day2/index.html#key-concepts-i-learned-today",

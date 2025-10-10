@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -170,15 +205,49 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="key-concepts-i-learned-today">Key Concepts I Learned Today</h2>
 <ul>
 <li><strong>Running a Nextflow script</strong></li>
-<li><strong>Running a nf-core pipeline</strong></li>
+<li><strong>Running an nf-core pipeline</strong></li>
 </ul>
 <section id="running-a-nextflow-script" class="level3">
 <h3 class="anchored" data-anchor-id="running-a-nextflow-script">Running a Nextflow script</h3>
-<p>Placeholder</p>
+<p>Today was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!</p>
+<p>Importantly, each process module has the following structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>process INDEX <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    optional container</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">    [bash code, can refer to a script in another language]</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>These processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    index_ch <span class="op">=</span> <span class="fu">INDEX</span><span class="op">(</span>params<span class="op">.</span>transcriptome_file<span class="op">)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    quant_ch <span class="op">=</span> <span class="fu">QUANTIFICATION</span><span class="op">(</span>index_ch<span class="op">,</span> read_pairs_ch<span class="op">)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    fastqc_ch <span class="op">=</span> <span class="fu">FASTQC</span><span class="op">(</span>read_pairs_ch<span class="op">)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">MULTIQC</span><span class="op">(</span>quant_ch<span class="op">.</span><span class="fu">mix</span><span class="op">(</span>fastqc_ch<span class="op">).</span><span class="fu">collect</span><span class="op">())</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Once everything is in place, the Nextflow command is straight-forward. If you work on a cluster, do not forget your .config file!</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>nextflow run script<span class="op">.</span>nf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="running-a-nf-core-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="running-a-nf-core-pipeline">Running a nf-core pipeline</h3>
-<p>Placeholder</p>
+<section id="running-an-nf-core-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="running-an-nf-core-pipeline">Running an nf-core pipeline</h3>
+<p>Of course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:</p>
+<div id="fig-id" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="nf-core-rnaseq_metro_map_grey.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <strong>nf-core RNAseq Pipeline.</strong> Schematic representation of the RNAseq pipeline from nf-core. Different stages and possible quantification methods are highlighted. Adapted from https://nf-co.re/rnaseq/3.14.0/ (last visit: 10/10/2025)
+</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="reflections" class="level2">
@@ -187,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>Placeholder</p>
+<p>Tomorrow is the last course day with a ggplot2 session as well as the ooportunity to give feedback.</p>
 <p><strong>Thanks for reading!</strong></p>
 
 

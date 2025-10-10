@@ -1,0 +1,19 @@
+---
+title: "Applied Bioinformatics Day 5"
+author: "Luca Gaessler"
+date: "2025-10-10"
+categories: [course, medbioinfo, learning]
+description: "Hosted by Sweden's School for Medical Bioinformatics"
+---
+
+## Key Concepts I Learned Today
+
+- **Advanced ggplot**
+
+### Advanced ggplot
+Placeholder
+
+## Reflections
+Placeholder
+
+**Thanks for reading!**

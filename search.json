@@ -109,21 +109,21 @@
     "href": "posts/MedBioInfo_Day5/index.html",
     "title": "Applied Bioinformatics Day 5",
     "section": "",
-    "text": "Advanced ggplot\n\n\n\nPlaceholder"
+    "text": "Advanced ggplot\n\n\n\nggplot is based on the “Grammar of Graphics” by Leland Wilkinson. In essence, each ggplot is built up from the following layers:\n\nData\nAesthetics\nGeometries\nFacets\nStatistics\nCoordinates\nTheme\n\nThe essential code that an author has to provide for a ggplot looks as follows. The tool provides defaults (which of course can be changed) for the other layers:\nggplot(data) +\ngeom_function()\nThe aesthetics can then be defined for every geometric object individually or globally for the plot itself.\nIn a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions.\n\n\n\n\n\n\nNoteDisclaimer\n\n\n\nFont sizes were not adapted in our re-creation experiment.\n\n\n\nThe Economist\n\nOriginal article: https://www.economist.com/graphic-detail/2011/12/02/corrosive-corruption\n\n\n\n\n\n\n\n\n\nFigure 1: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Re-created Figure\n\n\n\n\n\n\n\nThe Wall Street Journal\n\nOriginal article: https://graphics.wsj.com/infectious-diseases-and-vaccines/\n\n\n\n\n\n\n\n\n\nFigure 3: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Re-created Figure"
   },
   {
     "objectID": "posts/MedBioInfo_Day5/index.html#key-concepts-i-learned-today",
     "href": "posts/MedBioInfo_Day5/index.html#key-concepts-i-learned-today",
     "title": "Applied Bioinformatics Day 5",
     "section": "",
-    "text": "Advanced ggplot\n\n\n\nPlaceholder"
+    "text": "Advanced ggplot\n\n\n\nggplot is based on the “Grammar of Graphics” by Leland Wilkinson. In essence, each ggplot is built up from the following layers:\n\nData\nAesthetics\nGeometries\nFacets\nStatistics\nCoordinates\nTheme\n\nThe essential code that an author has to provide for a ggplot looks as follows. The tool provides defaults (which of course can be changed) for the other layers:\nggplot(data) +\ngeom_function()\nThe aesthetics can then be defined for every geometric object individually or globally for the plot itself.\nIn a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions.\n\n\n\n\n\n\nNoteDisclaimer\n\n\n\nFont sizes were not adapted in our re-creation experiment.\n\n\n\nThe Economist\n\nOriginal article: https://www.economist.com/graphic-detail/2011/12/02/corrosive-corruption\n\n\n\n\n\n\n\n\n\nFigure 1: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Re-created Figure\n\n\n\n\n\n\n\nThe Wall Street Journal\n\nOriginal article: https://graphics.wsj.com/infectious-diseases-and-vaccines/\n\n\n\n\n\n\n\n\n\nFigure 3: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Re-created Figure"
   },
   {
     "objectID": "posts/MedBioInfo_Day5/index.html#reflections",
     "href": "posts/MedBioInfo_Day5/index.html#reflections",
     "title": "Applied Bioinformatics Day 5",
     "section": "Reflections",
-    "text": "Reflections\nPlaceholder\nThanks for reading!"
+    "text": "Reflections\nAlthough I have already been a frequent user of ggplot2 and its functionalities before the lecture, the theory behind it was interesting to hear and helped me better understand why I am doing the things I am doing. Re-creating published figures was an especially fun task!\nThanks for reading!"
   },
   {
     "objectID": "posts/MedBioInfo_Day1/index.html",

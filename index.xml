@@ -10,7 +10,152 @@
 <atom:link href="https://lucagaessler.github.io/BioInfo_Blog_LG/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Wed, 08 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 09 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Applied Bioinformatics Day 4</title>
+  <dc:creator>Luca Gaessler</dc:creator>
+  <link>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day4/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="key-concepts-i-learned-today" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-i-learned-today">Key Concepts I Learned Today</h2>
+<ul>
+<li><strong>Running a Nextflow script</strong></li>
+<li><strong>Running an nf-core pipeline</strong></li>
+</ul>
+<section id="running-a-nextflow-script" class="level3">
+<h3 class="anchored" data-anchor-id="running-a-nextflow-script">Running a Nextflow script</h3>
+<p>Today was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!</p>
+<p>Importantly, each process module has the following structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb1-1">process INDEX <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb1-2">    input<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-3"></span>
+<span id="cb1-4">    optional container</span>
+<span id="cb1-5"></span>
+<span id="cb1-6">    output<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-7"></span>
+<span id="cb1-8">    script<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-9">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb1-10"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    [bash code, can refer to a script in another language]</span></span>
+<span id="cb1-11"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    """</span></span>
+<span id="cb1-12"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div></div>
+<p>These processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb2-1">workflow <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-2"></span>
+<span id="cb2-3">    index_ch <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">INDEX</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>params<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>transcriptome_file<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span id="cb2-4">    quant_ch <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">QUANTIFICATION</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>index_ch<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> read_pairs_ch<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span id="cb2-5">    fastqc_ch <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">FASTQC</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>read_pairs_ch<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span id="cb2-6">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">MULTIQC</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>quant_ch<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mix</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>fastqc_ch<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">).</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">collect</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">())</span></span>
+<span id="cb2-7"></span>
+<span id="cb2-8"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div></div>
+<p>Once everything is in place, the Nextflow command is straight-forward. If you work on a cluster, do not forget your .config file!</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb3-1">nextflow run script<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>nf</span></code></pre></div></div>
+</section>
+<section id="running-an-nf-core-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="running-an-nf-core-pipeline">Running an nf-core pipeline</h3>
+<p>Of course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:</p>
+<div id="fig-id" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day4/nf-core-rnaseq_metro_map_grey.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <strong>nf-core RNAseq Pipeline.</strong> Schematic representation of the RNAseq pipeline from nf-core. Different stages and possible quantification methods are highlighted. Adapted from https://nf-co.re/rnaseq/3.14.0/ (last visit: 10/10/2025)
+</figcaption>
+</figure>
+</div>
+<p>We set up the pipeline via the instructions on the nf-core website, using the offline mode, and ran it on the high-performance cluster HPC2N. I can only recommend this approach, especially when dealing with large sample numbers: it is straight-forward, robust &amp; highly reproducible. In summary, if a pipeline exists for your purposes, do not hesitate to try it out.</p>
+</section>
+</section>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
+<p>For my thoughts on Nextflow and nf-core, please have a look at my previous post from the day before.</p>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>Tomorrow is the last course day with a ggplot2 session as well as the opportunity to provide feedback to the organizers.</p>
+<p><strong>Thanks for reading!</strong></p>
+
+
+</section>
+
+ ]]></description>
+  <category>course</category>
+  <category>medbioinfo</category>
+  <category>learning</category>
+  <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day4/</guid>
+  <pubDate>Thu, 09 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Applied Bioinformatics Day 3</title>
   <dc:creator>Luca Gaessler</dc:creator>

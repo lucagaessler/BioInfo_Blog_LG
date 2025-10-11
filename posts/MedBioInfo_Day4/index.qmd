@@ -2,6 +2,7 @@
 title: "Applied Bioinformatics Day 4"
 author: "Luca Gaessler"
 date: "2025-10-09"
+image: "nf-core-rnaseq_metro_map_grey.png"
 categories: [course, medbioinfo, learning]
 description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---

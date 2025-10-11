@@ -2,6 +2,7 @@
 title: "Applied Bioinformatics Day 3"
 author: "Luca Gaessler"
 date: "2025-10-08"
+image: "Nextflow_scheme.png"
 categories: [course, medbioinfo, learning]
 description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---

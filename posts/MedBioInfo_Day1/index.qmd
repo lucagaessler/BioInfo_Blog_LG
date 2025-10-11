@@ -2,6 +2,7 @@
 title: "Applied Bioinformatics Day 1"
 author: "Luca Gaessler"
 date: "2025-10-06 16:00"
+image: "GitHub_Invertocat_Dark.png"
 categories: [course, medbioinfo, learning]
 description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---

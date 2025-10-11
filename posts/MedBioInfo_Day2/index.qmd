@@ -2,7 +2,7 @@
 title: "Applied Bioinformatics Day 2"
 author: "Luca Gaessler"
 date: "2025-10-07"
-image: "docker-logo-blue.png"
+image: "docker-mark-blue.png"
 categories: [course, medbioinfo, learning]
 description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---

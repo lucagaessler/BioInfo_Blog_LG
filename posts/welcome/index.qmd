@@ -2,6 +2,7 @@
 title: "Welcome To My Bioinformatics Blog"
 author: "Luca Gaessler"
 date: "2025-10-06 14:00"
+image: "thumbnail.jpg"
 categories: [news, bioinfo]
 ---
 

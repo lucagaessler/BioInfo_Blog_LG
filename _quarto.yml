@@ -5,8 +5,7 @@ execute:
   freeze: auto
 
 website:
-  description: "A blog built with Quarto"
-  title: "Bioinfo Blog"
+  title: "A bioinfo blog by Luca Gaessler"
   navbar:
     right:
       - icon: github

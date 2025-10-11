@@ -9,11 +9,10 @@ website:
   title: "Bioinfo Blog"
   navbar:
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://https://github.com/lucagaessler/BioInfo_Blog_LG
+      - icon: linkedin
+        href: https://https://www.linkedin.com/in/luca-gaessler/
 format:
   html:
     theme: 

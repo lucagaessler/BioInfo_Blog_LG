@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/about.html</loc>
-    <lastmod>2025-10-10T13:04:51.853Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/welcome/index.html</loc>
-    <lastmod>2025-10-10T13:04:51.859Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day2/index.html</loc>
-    <lastmod>2025-10-10T13:04:51.854Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day4/index.html</loc>
-    <lastmod>2025-10-10T13:04:51.854Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/index.html</loc>
-    <lastmod>2025-10-10T13:04:51.853Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/index.html</loc>
-    <lastmod>2025-10-10T13:04:51.854Z</lastmod>
+    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day1/index.html</loc>
+    <lastmod>2025-10-11T12:19:20.721Z</lastmod>
   </url>
   <url>
     <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day5/index.html</loc>
-    <lastmod>2025-10-10T13:04:51.859Z</lastmod>
+    <lastmod>2025-10-11T12:19:20.726Z</lastmod>
   </url>
   <url>
-    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day1/index.html</loc>
-    <lastmod>2025-10-10T13:04:51.853Z</lastmod>
+    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/index.html</loc>
+    <lastmod>2025-10-11T12:19:20.722Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/index.html</loc>
+    <lastmod>2025-10-11T12:19:20.721Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day4/index.html</loc>
+    <lastmod>2025-10-11T12:19:20.722Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day2/index.html</loc>
+    <lastmod>2025-10-11T12:19:20.721Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/welcome/index.html</loc>
+    <lastmod>2025-10-11T12:19:20.726Z</lastmod>
   </url>
 </urlset>

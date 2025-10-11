@@ -1,80 +1,52 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/MedBioInfo_Day1/index.html",
+    "href": "posts/MedBioInfo_Day1/index.html",
+    "title": "Applied Bioinformatics Day 1",
     "section": "",
-    "text": "About this blog"
+    "text": "Collaborating in GitHub\nQuarto Blogs\nGitHub Pages & Actions\n\n\n\nToday’s practical session was initiated by a group task. The goal was to create an ordered list of all participant’s names. An easy task at first but not if you consider the following rule: “Each student can only write their own name in a stand-alone file.”. This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on… The final workflow turned out to be less structured but we still managed to come up with the full list in the end.\nMerging the document looked as follows:\ngit pull # update local repository\ngit checkout [branch_1] # switch to branch that will be merged into\ngit merge [branch_2] # merge the two branches\n# solve conflicts\ngit add # stage changes\ngit commit # commit changes\ngit push # add changes to remote repository\n\n\n\nQuarto has been developed for literate programming, meaning that it can combine code with markdown text. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, “Applied Bioinformatics”, in a blog format - one post for each day. Of course version-controlled via Git(Hub)!\n\n\n\nEach member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Bioinformatics Blog",
+    "objectID": "posts/MedBioInfo_Day1/index.html#key-concepts-i-learned-today",
+    "href": "posts/MedBioInfo_Day1/index.html#key-concepts-i-learned-today",
+    "title": "Applied Bioinformatics Day 1",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Collaborating in GitHub\nQuarto Blogs\nGitHub Pages & Actions\n\n\n\nToday’s practical session was initiated by a group task. The goal was to create an ordered list of all participant’s names. An easy task at first but not if you consider the following rule: “Each student can only write their own name in a stand-alone file.”. This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on… The final workflow turned out to be less structured but we still managed to come up with the full list in the end.\nMerging the document looked as follows:\ngit pull # update local repository\ngit checkout [branch_1] # switch to branch that will be merged into\ngit merge [branch_2] # merge the two branches\n# solve conflicts\ngit add # stage changes\ngit commit # commit changes\ngit push # add changes to remote repository\n\n\n\nQuarto has been developed for literate programming, meaning that it can combine code with markdown text. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, “Applied Bioinformatics”, in a blog format - one post for each day. Of course version-controlled via Git(Hub)!\n\n\n\nEach member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions."
   },
   {
-    "objectID": "posts/MedBioInfo_Day2/index.html",
-    "href": "posts/MedBioInfo_Day2/index.html",
-    "title": "Applied Bioinformatics Day 2",
-    "section": "",
-    "text": "Coding Environments\nContainerization\n\n\n\nToday’s session was all about reproducibility. How can we as computational biologists ensure that our tools always give the same results? This question becomes especially relevant when sharing code with collaborators, which might use different operating systems or have packages in different versions installed.\nCoding environments like Pixi can help us not only to keep track of the tools and the versions that we use in our analyses but also to enforce them within the limits of a project. A Pixi-controlled environment covers one directory as well as its subdirectories, and is created similarly to a GitHub repository:\npixi init [channel]\nBy providing channels, i.e. the tool space that Pixi can choose from, we define where our packages are actually coming from. For example, we provided the Conda-Forge and Bioconda databases. Packages can then be easily installed and run using the following commands:\npixi add [package]\n\npixi run [command]\nAlternatively, the Pixi environment can also be accessed as its own shell.\n\n\n\nContainers work quite similarly to environments but isolate its content even more from the machine they are running on. Even the operating system can be different. This allows the users to apply different versions of one tool on their computer and ensures a high degree of reproducibility when sharing scripts and the corresponding container. Containers are stored and shared as “container images”, a type of metadata. These images can be conveniently downloaded from Websites like “docker.com” and then be used to build the actual container. Prominent examples container managment softwares are Docker, often used on individual computers, and Apptainer, often the tool of choice for Linux-based computer clusters.\nContainers can be run both from the inside (more for exploratory analyses) and the outside (once the workflow is established):\napptainer shell [container] #inside\n\napptainer exec [container] [command] #outside\nIt is possible to build your own container, giving you all the power over its operating system, dependencies, etc. Still, this task is often computationally extensive and in most cases, a suitable container with the desired tool is already available to download from the web."
-  },
-  {
-    "objectID": "posts/MedBioInfo_Day2/index.html#key-concepts-i-learned-today",
-    "href": "posts/MedBioInfo_Day2/index.html#key-concepts-i-learned-today",
-    "title": "Applied Bioinformatics Day 2",
-    "section": "",
-    "text": "Coding Environments\nContainerization\n\n\n\nToday’s session was all about reproducibility. How can we as computational biologists ensure that our tools always give the same results? This question becomes especially relevant when sharing code with collaborators, which might use different operating systems or have packages in different versions installed.\nCoding environments like Pixi can help us not only to keep track of the tools and the versions that we use in our analyses but also to enforce them within the limits of a project. A Pixi-controlled environment covers one directory as well as its subdirectories, and is created similarly to a GitHub repository:\npixi init [channel]\nBy providing channels, i.e. the tool space that Pixi can choose from, we define where our packages are actually coming from. For example, we provided the Conda-Forge and Bioconda databases. Packages can then be easily installed and run using the following commands:\npixi add [package]\n\npixi run [command]\nAlternatively, the Pixi environment can also be accessed as its own shell.\n\n\n\nContainers work quite similarly to environments but isolate its content even more from the machine they are running on. Even the operating system can be different. This allows the users to apply different versions of one tool on their computer and ensures a high degree of reproducibility when sharing scripts and the corresponding container. Containers are stored and shared as “container images”, a type of metadata. These images can be conveniently downloaded from Websites like “docker.com” and then be used to build the actual container. Prominent examples container managment softwares are Docker, often used on individual computers, and Apptainer, often the tool of choice for Linux-based computer clusters.\nContainers can be run both from the inside (more for exploratory analyses) and the outside (once the workflow is established):\napptainer shell [container] #inside\n\napptainer exec [container] [command] #outside\nIt is possible to build your own container, giving you all the power over its operating system, dependencies, etc. Still, this task is often computationally extensive and in most cases, a suitable container with the desired tool is already available to download from the web."
-  },
-  {
-    "objectID": "posts/MedBioInfo_Day2/index.html#reflections",
-    "href": "posts/MedBioInfo_Day2/index.html#reflections",
-    "title": "Applied Bioinformatics Day 2",
+    "objectID": "posts/MedBioInfo_Day1/index.html#reflections",
+    "href": "posts/MedBioInfo_Day1/index.html#reflections",
+    "title": "Applied Bioinformatics Day 1",
     "section": "Reflections",
-    "text": "Reflections\nNaturally, there is no perfect solution among the two approaches and both have their Pros & Cons. While environments like Pixi let you interact with outside directories more easily than containers, tools like Docker provide you with a higher degree of control over the conditions in which your analyses take place. In the end, it is all about finding a tool that balances outcome and effort according to the situation. The important part is to increase the reproducibility of your science, and both tools are a valuable addition for that."
+    "text": "Reflections\nIn conclusion, the first day was a great start into the course! Now that we have laid the foundation for collaborative work via GitHub as well as our primary medium of documentation, the Quarto Blog, we are ready to dive into the complex topics of Bioinformatics!"
   },
   {
-    "objectID": "posts/MedBioInfo_Day2/index.html#next-steps",
-    "href": "posts/MedBioInfo_Day2/index.html#next-steps",
-    "title": "Applied Bioinformatics Day 2",
+    "objectID": "posts/MedBioInfo_Day1/index.html#next-steps",
+    "href": "posts/MedBioInfo_Day1/index.html#next-steps",
+    "title": "Applied Bioinformatics Day 1",
     "section": "Next Steps",
-    "text": "Next Steps\nTomorrow will be all about bioinformatic pipelines and how to built them! Stay tuned for my next post, which will be about…\nNetxflow!\nThanks for reading!"
+    "text": "Next Steps\nNext, I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!\nThanks for reading!"
   },
   {
-    "objectID": "posts/MedBioInfo_Day4/index.html",
-    "href": "posts/MedBioInfo_Day4/index.html",
-    "title": "Applied Bioinformatics Day 4",
+    "objectID": "posts/MedBioInfo_Day5/index.html",
+    "href": "posts/MedBioInfo_Day5/index.html",
+    "title": "Applied Bioinformatics Day 5",
     "section": "",
-    "text": "Running a Nextflow script\nRunning an nf-core pipeline\n\n\n\nToday was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!\nImportantly, each process module has the following structure:\nprocess INDEX {\n    input:\n\n    optional container\n\n    output:\n\n    script:\n    \"\"\"\n    [bash code, can refer to a script in another language]\n    \"\"\"\n}\nThese processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):\nworkflow {\n\n    index_ch = INDEX(params.transcriptome_file)\n    quant_ch = QUANTIFICATION(index_ch, read_pairs_ch)\n    fastqc_ch = FASTQC(read_pairs_ch)\n    MULTIQC(quant_ch.mix(fastqc_ch).collect())\n\n}\nOnce everything is in place, the Nextflow command is straight-forward. If you work on a cluster, do not forget your .config file!\nnextflow run script.nf\n\n\n\nOf course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:\n\n\n\n\n\n\nFigure 1: nf-core RNAseq Pipeline. Schematic representation of the RNAseq pipeline from nf-core. Different stages and possible quantification methods are highlighted. Adapted from https://nf-co.re/rnaseq/3.14.0/ (last visit: 10/10/2025)\n\n\n\nWe set up the pipeline via the instructions on the nf-core website, using the offline mode, and ran it on the high-performance cluster HPC2N. I can only recommend this approach, especially when dealing with large sample numbers: it is straight-forward, robust & highly reproducible. In summary, if a pipeline exists for your purposes, do not hesitate to try it out."
+    "text": "Advanced ggplot\n\n\n\nggplot is based on the “Grammar of Graphics” by Leland Wilkinson. In essence, each ggplot is built up from the following layers:\n\nData\nAesthetics\nGeometries\nFacets\nStatistics\nCoordinates\nTheme\n\nThe essential code that an author has to provide for a ggplot looks as follows. The tool provides defaults (which of course can be changed) for the other layers:\nggplot(data) +\ngeom_function()\nThe aesthetics can then be defined for every geometric object individually or globally for the plot itself.\nIn a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions.\n\n\n\n\n\n\nNoteDisclaimer\n\n\n\nFont sizes were not adapted in our re-creation experiment.\n\n\n\nThe Economist\n\nOriginal article: https://www.economist.com/graphic-detail/2011/12/02/corrosive-corruption\n\n\n\n\n\n\n\n\n\nFigure 1: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Re-created Figure\n\n\n\n\n\n\n\nThe Wall Street Journal\n\nOriginal article: https://graphics.wsj.com/infectious-diseases-and-vaccines/\n\n\n\n\n\n\n\n\n\nFigure 3: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Re-created Figure"
   },
   {
-    "objectID": "posts/MedBioInfo_Day4/index.html#key-concepts-i-learned-today",
-    "href": "posts/MedBioInfo_Day4/index.html#key-concepts-i-learned-today",
-    "title": "Applied Bioinformatics Day 4",
+    "objectID": "posts/MedBioInfo_Day5/index.html#key-concepts-i-learned-today",
+    "href": "posts/MedBioInfo_Day5/index.html#key-concepts-i-learned-today",
+    "title": "Applied Bioinformatics Day 5",
     "section": "",
-    "text": "Running a Nextflow script\nRunning an nf-core pipeline\n\n\n\nToday was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!\nImportantly, each process module has the following structure:\nprocess INDEX {\n    input:\n\n    optional container\n\n    output:\n\n    script:\n    \"\"\"\n    [bash code, can refer to a script in another language]\n    \"\"\"\n}\nThese processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):\nworkflow {\n\n    index_ch = INDEX(params.transcriptome_file)\n    quant_ch = QUANTIFICATION(index_ch, read_pairs_ch)\n    fastqc_ch = FASTQC(read_pairs_ch)\n    MULTIQC(quant_ch.mix(fastqc_ch).collect())\n\n}\nOnce everything is in place, the Nextflow command is straight-forward. If you work on a cluster, do not forget your .config file!\nnextflow run script.nf\n\n\n\nOf course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:\n\n\n\n\n\n\nFigure 1: nf-core RNAseq Pipeline. Schematic representation of the RNAseq pipeline from nf-core. Different stages and possible quantification methods are highlighted. Adapted from https://nf-co.re/rnaseq/3.14.0/ (last visit: 10/10/2025)\n\n\n\nWe set up the pipeline via the instructions on the nf-core website, using the offline mode, and ran it on the high-performance cluster HPC2N. I can only recommend this approach, especially when dealing with large sample numbers: it is straight-forward, robust & highly reproducible. In summary, if a pipeline exists for your purposes, do not hesitate to try it out."
+    "text": "Advanced ggplot\n\n\n\nggplot is based on the “Grammar of Graphics” by Leland Wilkinson. In essence, each ggplot is built up from the following layers:\n\nData\nAesthetics\nGeometries\nFacets\nStatistics\nCoordinates\nTheme\n\nThe essential code that an author has to provide for a ggplot looks as follows. The tool provides defaults (which of course can be changed) for the other layers:\nggplot(data) +\ngeom_function()\nThe aesthetics can then be defined for every geometric object individually or globally for the plot itself.\nIn a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions.\n\n\n\n\n\n\nNoteDisclaimer\n\n\n\nFont sizes were not adapted in our re-creation experiment.\n\n\n\nThe Economist\n\nOriginal article: https://www.economist.com/graphic-detail/2011/12/02/corrosive-corruption\n\n\n\n\n\n\n\n\n\nFigure 1: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Re-created Figure\n\n\n\n\n\n\n\nThe Wall Street Journal\n\nOriginal article: https://graphics.wsj.com/infectious-diseases-and-vaccines/\n\n\n\n\n\n\n\n\n\nFigure 3: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Re-created Figure"
   },
   {
-    "objectID": "posts/MedBioInfo_Day4/index.html#reflections",
-    "href": "posts/MedBioInfo_Day4/index.html#reflections",
-    "title": "Applied Bioinformatics Day 4",
+    "objectID": "posts/MedBioInfo_Day5/index.html#reflections",
+    "href": "posts/MedBioInfo_Day5/index.html#reflections",
+    "title": "Applied Bioinformatics Day 5",
     "section": "Reflections",
-    "text": "Reflections\nFor my thoughts on Nextflow and nf-core, please have a look at my previous post from the day before."
-  },
-  {
-    "objectID": "posts/MedBioInfo_Day4/index.html#next-steps",
-    "href": "posts/MedBioInfo_Day4/index.html#next-steps",
-    "title": "Applied Bioinformatics Day 4",
-    "section": "Next Steps",
-    "text": "Next Steps\nTomorrow is the last course day with a ggplot2 session as well as the opportunity to provide feedback to the organizers.\nThanks for reading!"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Bioinfo Blog",
-    "section": "",
-    "text": "Applied Bioinformatics Day 5\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 10, 2025\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 4\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 9, 2025\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 3\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 8, 2025\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 2\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 7, 2025\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Bioinformatics Blog\n\n\n\nnews\n\nbioinfo\n\n\n\n\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 1\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Reflections\nAlthough I have already been a frequent user of ggplot2 and its functionalities before the lecture, the theory behind it was interesting to hear and helped me better understand why I am doing the things I am doing. Re-creating published figures was an especially fun task!\nThanks for reading!"
   },
   {
     "objectID": "posts/MedBioInfo_Day3/index.html",
@@ -105,52 +77,73 @@
     "text": "Next Steps\nWhile we have only scratched the surface of bioinformatic pipelines today, tomorrow will bring more hands-on tasks on Nextflow as well as the use of nf-core pipelines.\nThanks for reading!"
   },
   {
-    "objectID": "posts/MedBioInfo_Day5/index.html",
-    "href": "posts/MedBioInfo_Day5/index.html",
-    "title": "Applied Bioinformatics Day 5",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bioinformatics Posts",
     "section": "",
-    "text": "Advanced ggplot\n\n\n\nggplot is based on the “Grammar of Graphics” by Leland Wilkinson. In essence, each ggplot is built up from the following layers:\n\nData\nAesthetics\nGeometries\nFacets\nStatistics\nCoordinates\nTheme\n\nThe essential code that an author has to provide for a ggplot looks as follows. The tool provides defaults (which of course can be changed) for the other layers:\nggplot(data) +\ngeom_function()\nThe aesthetics can then be defined for every geometric object individually or globally for the plot itself.\nIn a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions.\n\n\n\n\n\n\nNoteDisclaimer\n\n\n\nFont sizes were not adapted in our re-creation experiment.\n\n\n\nThe Economist\n\nOriginal article: https://www.economist.com/graphic-detail/2011/12/02/corrosive-corruption\n\n\n\n\n\n\n\n\n\nFigure 1: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Re-created Figure\n\n\n\n\n\n\n\nThe Wall Street Journal\n\nOriginal article: https://graphics.wsj.com/infectious-diseases-and-vaccines/\n\n\n\n\n\n\n\n\n\nFigure 3: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Re-created Figure"
+    "text": "Applied Bioinformatics Day 5\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 4\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 3\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 2\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 7, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nApplied Bioinformatics Day 1\n\n\n\ncourse\n\nmedbioinfo\n\nlearning\n\n\n\nHosted by Sweden’s School for Medical Bioinformatics\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Bioinformatics Blog\n\n\n\nnews\n\nbioinfo\n\n\n\n\n\n\n\nLuca Gaessler\n\n\nOct 6, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/MedBioInfo_Day5/index.html#key-concepts-i-learned-today",
-    "href": "posts/MedBioInfo_Day5/index.html#key-concepts-i-learned-today",
-    "title": "Applied Bioinformatics Day 5",
+    "objectID": "posts/MedBioInfo_Day4/index.html",
+    "href": "posts/MedBioInfo_Day4/index.html",
+    "title": "Applied Bioinformatics Day 4",
     "section": "",
-    "text": "Advanced ggplot\n\n\n\nggplot is based on the “Grammar of Graphics” by Leland Wilkinson. In essence, each ggplot is built up from the following layers:\n\nData\nAesthetics\nGeometries\nFacets\nStatistics\nCoordinates\nTheme\n\nThe essential code that an author has to provide for a ggplot looks as follows. The tool provides defaults (which of course can be changed) for the other layers:\nggplot(data) +\ngeom_function()\nThe aesthetics can then be defined for every geometric object individually or globally for the plot itself.\nIn a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions.\n\n\n\n\n\n\nNoteDisclaimer\n\n\n\nFont sizes were not adapted in our re-creation experiment.\n\n\n\nThe Economist\n\nOriginal article: https://www.economist.com/graphic-detail/2011/12/02/corrosive-corruption\n\n\n\n\n\n\n\n\n\nFigure 1: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Re-created Figure\n\n\n\n\n\n\n\nThe Wall Street Journal\n\nOriginal article: https://graphics.wsj.com/infectious-diseases-and-vaccines/\n\n\n\n\n\n\n\n\n\nFigure 3: Original Figure\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Re-created Figure"
+    "text": "Running a Nextflow script\nRunning an nf-core pipeline\n\n\n\nToday was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!\nImportantly, each process module has the following structure:\nprocess INDEX {\n    input:\n\n    optional container\n\n    output:\n\n    script:\n    \"\"\"\n    [bash code, can refer to a script in another language]\n    \"\"\"\n}\nThese processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):\nworkflow {\n\n    index_ch = INDEX(params.transcriptome_file)\n    quant_ch = QUANTIFICATION(index_ch, read_pairs_ch)\n    fastqc_ch = FASTQC(read_pairs_ch)\n    MULTIQC(quant_ch.mix(fastqc_ch).collect())\n\n}\nOnce everything is in place, the Nextflow command is straight-forward. If you work on a cluster, do not forget your .config file!\nnextflow run script.nf\n\n\n\nOf course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:\n\n\n\n\n\n\nFigure 1: nf-core RNAseq Pipeline. Schematic representation of the RNAseq pipeline from nf-core. Different stages and possible quantification methods are highlighted. Adapted from https://nf-co.re/rnaseq/3.14.0/ (last visit: 10/10/2025)\n\n\n\nWe set up the pipeline via the instructions on the nf-core website, using the offline mode, and ran it on the high-performance cluster HPC2N. I can only recommend this approach, especially when dealing with large sample numbers: it is straight-forward, robust & highly reproducible. In summary, if a pipeline exists for your purposes, do not hesitate to try it out."
   },
   {
-    "objectID": "posts/MedBioInfo_Day5/index.html#reflections",
-    "href": "posts/MedBioInfo_Day5/index.html#reflections",
-    "title": "Applied Bioinformatics Day 5",
+    "objectID": "posts/MedBioInfo_Day4/index.html#key-concepts-i-learned-today",
+    "href": "posts/MedBioInfo_Day4/index.html#key-concepts-i-learned-today",
+    "title": "Applied Bioinformatics Day 4",
+    "section": "",
+    "text": "Running a Nextflow script\nRunning an nf-core pipeline\n\n\n\nToday was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!\nImportantly, each process module has the following structure:\nprocess INDEX {\n    input:\n\n    optional container\n\n    output:\n\n    script:\n    \"\"\"\n    [bash code, can refer to a script in another language]\n    \"\"\"\n}\nThese processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):\nworkflow {\n\n    index_ch = INDEX(params.transcriptome_file)\n    quant_ch = QUANTIFICATION(index_ch, read_pairs_ch)\n    fastqc_ch = FASTQC(read_pairs_ch)\n    MULTIQC(quant_ch.mix(fastqc_ch).collect())\n\n}\nOnce everything is in place, the Nextflow command is straight-forward. If you work on a cluster, do not forget your .config file!\nnextflow run script.nf\n\n\n\nOf course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:\n\n\n\n\n\n\nFigure 1: nf-core RNAseq Pipeline. Schematic representation of the RNAseq pipeline from nf-core. Different stages and possible quantification methods are highlighted. Adapted from https://nf-co.re/rnaseq/3.14.0/ (last visit: 10/10/2025)\n\n\n\nWe set up the pipeline via the instructions on the nf-core website, using the offline mode, and ran it on the high-performance cluster HPC2N. I can only recommend this approach, especially when dealing with large sample numbers: it is straight-forward, robust & highly reproducible. In summary, if a pipeline exists for your purposes, do not hesitate to try it out."
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day4/index.html#reflections",
+    "href": "posts/MedBioInfo_Day4/index.html#reflections",
+    "title": "Applied Bioinformatics Day 4",
     "section": "Reflections",
-    "text": "Reflections\nAlthough I have already been a frequent user of ggplot2 and its functionalities before the lecture, the theory behind it was interesting to hear and helped me better understand why I am doing the things I am doing. Re-creating published figures was an especially fun task!\nThanks for reading!"
+    "text": "Reflections\nFor my thoughts on Nextflow and nf-core, please have a look at my previous post from the day before."
   },
   {
-    "objectID": "posts/MedBioInfo_Day1/index.html",
-    "href": "posts/MedBioInfo_Day1/index.html",
-    "title": "Applied Bioinformatics Day 1",
-    "section": "",
-    "text": "Collaborating in GitHub\nQuarto Blogs\nGitHub Pages & Actions\n\n\n\nToday’s practical session was initiated by a group task. The goal was to create an ordered list of all participant’s names. An easy task at first but not if you consider the following rule: “Each student can only write their own name in a stand-alone file.”. This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on… The final workflow turned out to be less structured but we still managed to come up with the full list in the end.\nMerging the document looked as follows:\ngit pull # update local repository\ngit checkout [branch_1] # switch to branch that will be merged into\ngit merge [branch_2] # merge the two branches\n# solve conflicts\ngit add # stage changes\ngit commit # commit changes\ngit push # add changes to remote repository\n\n\n\nQuarto has been developed for literate programming, meaning that it can combine code with markdown text. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, “Applied Bioinformatics”, in a blog format - one post for each day. Of course version-controlled via Git(Hub)!\n\n\n\nEach member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions."
-  },
-  {
-    "objectID": "posts/MedBioInfo_Day1/index.html#key-concepts-i-learned-today",
-    "href": "posts/MedBioInfo_Day1/index.html#key-concepts-i-learned-today",
-    "title": "Applied Bioinformatics Day 1",
-    "section": "",
-    "text": "Collaborating in GitHub\nQuarto Blogs\nGitHub Pages & Actions\n\n\n\nToday’s practical session was initiated by a group task. The goal was to create an ordered list of all participant’s names. An easy task at first but not if you consider the following rule: “Each student can only write their own name in a stand-alone file.”. This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on… The final workflow turned out to be less structured but we still managed to come up with the full list in the end.\nMerging the document looked as follows:\ngit pull # update local repository\ngit checkout [branch_1] # switch to branch that will be merged into\ngit merge [branch_2] # merge the two branches\n# solve conflicts\ngit add # stage changes\ngit commit # commit changes\ngit push # add changes to remote repository\n\n\n\nQuarto has been developed for literate programming, meaning that it can combine code with markdown text. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, “Applied Bioinformatics”, in a blog format - one post for each day. Of course version-controlled via Git(Hub)!\n\n\n\nEach member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions."
-  },
-  {
-    "objectID": "posts/MedBioInfo_Day1/index.html#reflections",
-    "href": "posts/MedBioInfo_Day1/index.html#reflections",
-    "title": "Applied Bioinformatics Day 1",
-    "section": "Reflections",
-    "text": "Reflections\nIn conclusion, the first day was a great start into the course! Now that we have laid the foundation for collaborative work via GitHub as well as our primary medium of documentation, the Quarto Blog, we are ready to dive into the complex topics of Bioinformatics!"
-  },
-  {
-    "objectID": "posts/MedBioInfo_Day1/index.html#next-steps",
-    "href": "posts/MedBioInfo_Day1/index.html#next-steps",
-    "title": "Applied Bioinformatics Day 1",
+    "objectID": "posts/MedBioInfo_Day4/index.html#next-steps",
+    "href": "posts/MedBioInfo_Day4/index.html#next-steps",
+    "title": "Applied Bioinformatics Day 4",
     "section": "Next Steps",
-    "text": "Next Steps\nNext, I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!\nThanks for reading!"
+    "text": "Next Steps\nTomorrow is the last course day with a ggplot2 session as well as the opportunity to provide feedback to the organizers.\nThanks for reading!"
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day2/index.html",
+    "href": "posts/MedBioInfo_Day2/index.html",
+    "title": "Applied Bioinformatics Day 2",
+    "section": "",
+    "text": "Coding Environments\nContainerization\n\n\n\nToday’s session was all about reproducibility. How can we as computational biologists ensure that our tools always give the same results? This question becomes especially relevant when sharing code with collaborators, which might use different operating systems or have packages in different versions installed.\nCoding environments like Pixi can help us not only to keep track of the tools and the versions that we use in our analyses but also to enforce them within the limits of a project. A Pixi-controlled environment covers one directory as well as its subdirectories, and is created similarly to a GitHub repository:\npixi init [channel]\nBy providing channels, i.e. the tool space that Pixi can choose from, we define where our packages are actually coming from. For example, we provided the Conda-Forge and Bioconda databases. Packages can then be easily installed and run using the following commands:\npixi add [package]\n\npixi run [command]\nAlternatively, the Pixi environment can also be accessed as its own shell.\n\n\n\nContainers work quite similarly to environments but isolate its content even more from the machine they are running on. Even the operating system can be different. This allows the users to apply different versions of one tool on their computer and ensures a high degree of reproducibility when sharing scripts and the corresponding container. Containers are stored and shared as “container images”, a type of metadata. These images can be conveniently downloaded from Websites like “docker.com” and then be used to build the actual container. Prominent examples container managment softwares are Docker, often used on individual computers, and Apptainer, often the tool of choice for Linux-based computer clusters.\nContainers can be run both from the inside (more for exploratory analyses) and the outside (once the workflow is established):\napptainer shell [container] #inside\n\napptainer exec [container] [command] #outside\nIt is possible to build your own container, giving you all the power over its operating system, dependencies, etc. Still, this task is often computationally extensive and in most cases, a suitable container with the desired tool is already available to download from the web."
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day2/index.html#key-concepts-i-learned-today",
+    "href": "posts/MedBioInfo_Day2/index.html#key-concepts-i-learned-today",
+    "title": "Applied Bioinformatics Day 2",
+    "section": "",
+    "text": "Coding Environments\nContainerization\n\n\n\nToday’s session was all about reproducibility. How can we as computational biologists ensure that our tools always give the same results? This question becomes especially relevant when sharing code with collaborators, which might use different operating systems or have packages in different versions installed.\nCoding environments like Pixi can help us not only to keep track of the tools and the versions that we use in our analyses but also to enforce them within the limits of a project. A Pixi-controlled environment covers one directory as well as its subdirectories, and is created similarly to a GitHub repository:\npixi init [channel]\nBy providing channels, i.e. the tool space that Pixi can choose from, we define where our packages are actually coming from. For example, we provided the Conda-Forge and Bioconda databases. Packages can then be easily installed and run using the following commands:\npixi add [package]\n\npixi run [command]\nAlternatively, the Pixi environment can also be accessed as its own shell.\n\n\n\nContainers work quite similarly to environments but isolate its content even more from the machine they are running on. Even the operating system can be different. This allows the users to apply different versions of one tool on their computer and ensures a high degree of reproducibility when sharing scripts and the corresponding container. Containers are stored and shared as “container images”, a type of metadata. These images can be conveniently downloaded from Websites like “docker.com” and then be used to build the actual container. Prominent examples container managment softwares are Docker, often used on individual computers, and Apptainer, often the tool of choice for Linux-based computer clusters.\nContainers can be run both from the inside (more for exploratory analyses) and the outside (once the workflow is established):\napptainer shell [container] #inside\n\napptainer exec [container] [command] #outside\nIt is possible to build your own container, giving you all the power over its operating system, dependencies, etc. Still, this task is often computationally extensive and in most cases, a suitable container with the desired tool is already available to download from the web."
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day2/index.html#reflections",
+    "href": "posts/MedBioInfo_Day2/index.html#reflections",
+    "title": "Applied Bioinformatics Day 2",
+    "section": "Reflections",
+    "text": "Reflections\nNaturally, there is no perfect solution among the two approaches and both have their Pros & Cons. While environments like Pixi let you interact with outside directories more easily than containers, tools like Docker provide you with a higher degree of control over the conditions in which your analyses take place. In the end, it is all about finding a tool that balances outcome and effort according to the situation. The important part is to increase the reproducibility of your science, and both tools are a valuable addition for that."
+  },
+  {
+    "objectID": "posts/MedBioInfo_Day2/index.html#next-steps",
+    "href": "posts/MedBioInfo_Day2/index.html#next-steps",
+    "title": "Applied Bioinformatics Day 2",
+    "section": "Next Steps",
+    "text": "Next Steps\nTomorrow will be all about bioinformatic pipelines and how to built them! Stay tuned for my next post, which will be about…\nNetxflow!\nThanks for reading!"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Bioinformatics Blog",
+    "section": "",
+    "text": "This is the first post in my Quarto blog. Welcome!"
   }
 ]

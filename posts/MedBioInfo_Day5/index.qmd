@@ -3,7 +3,7 @@ title: "Applied Bioinformatics Day 5"
 author: "Luca Gaessler"
 date: "2025-10-10"
 image: "figures/economist-scatterplot.png"
-categories: [course, medbioinfo, learning]
+categories: [course, medbioinfo, ggplot]
 description: "Hosted by Sweden's School for Medical Bioinformatics"
 ---
 
@@ -22,7 +22,7 @@ ggplot is based on the "Grammar of Graphics" by Leland Wilkinson. In essence, ea
 - Coordinates
 - Theme
 
-The essential code that an author has to provide for a ggplot looks as follows. The tool provides defaults (which of course can be changed) for the other layers:
+The essential code that an author has to provide for a ggplot is very simple and looks as follows. The tool provides defaults (which of course can be changed) for the other layers:
 
 ```R
 ggplot(data) +
@@ -31,12 +31,12 @@ geom_function()
 
 The aesthetics can then be defined for every geometric object individually or globally for the plot itself.
 
-In a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions.
+In a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions (material taken from the RaukR summer school 2023. Author: Roy Francis).
 
 ::: {.callout-note}
 ## Disclaimer
 
-Font sizes were not adapted in our re-creation experiment.
+Font sizes were not adapted in our re-creation experiment since they have to be identified and downloaded beforehand. See the original figure on the left and my recreations on the right.
 :::
 
 (1) The Economist
@@ -60,6 +60,6 @@ Original article: https://graphics.wsj.com/infectious-diseases-and-vaccines/
 :::
 
 ## Reflections
-Although I have already been a frequent user of ggplot2 and its functionalities before the lecture, the theory behind it was interesting to hear and helped me better understand why I am doing the things I am doing. Re-creating published figures was an especially fun task! 
+Although I am a frequent user of ggplot2 and its functionalities, the theory behind the tools was interesting to hear and helped me better understand why I am doing the things that I am doing. Re-creating the published figures was an especially fun task! 
 
 **Thanks for reading!**

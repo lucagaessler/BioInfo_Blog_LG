@@ -96,12 +96,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://https://github.com/lucagaessler/BioInfo_Blog_LG"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/lucagaessler/BioInfo_Blog_LG"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://https://www.linkedin.com/in/luca-gaessler/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/luca-gaessler/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
                           <div class="quarto-categories">
                 <div class="quarto-category">course</div>
                 <div class="quarto-category">medbioinfo</div>
-                <div class="quarto-category">learning</div>
+                <div class="quarto-category">nextflow</div>
               </div>
                   </div>
   </div>
@@ -170,22 +170,22 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <section id="nextflow" class="level3">
 <h3 class="anchored" data-anchor-id="nextflow">Nextflow</h3>
-<p>Nextflow is a tool to connect different parts of your analysis. While this might trigger reactions like “I can run my scripts myself” and “Nice to have”, the use of workflow managers is real and multifold. Nextflow scripts not only lower manual efforts, and thereby the possibility of human erros, but also enhance analytical scalability and reproducibility. When scripts are run over many samples, high-performance clusters are essential. When transferring scripts from local computers to clusters, Nexflow is a game-changer. It always keeps the functional logic of a workflow separate from its execution, meaning that you only have to exchange your local for appropriate server parameters to scale up your analysis. Additionally, Nextflow inherently incorporates version control and containerization, which - as I told about in the previous posts - are real boosters of science reproducibility.</p>
-<p>A very useful function in Nextflow is the “resume” option. Imagine your pipeline has a bug right after a computationally expensive calculation. After fixing the bug, “resume” allows you to re-run the now working pipeline but all unchanged steps are skipped and their results recovered from cache instead.</p>
+<p>Nextflow is a tool used to connect different parts of your analysis. While this might trigger reactions like “I can run my scripts myself!” and “This is more a nice-to-have!”, the use of workflow managers is real and multifold. Nextflow scripts not only lower manual efforts, and thereby reduce human error, but also enhance analytical scalability and reproducibility. When scripts are run over many samples, high-performance clusters are essential. When transferring scripts from local computers to clusters, Nexflow is a game-changer. It always keeps the functional logic of a workflow separate from its execution, meaning that you only have to exchange your local for appropriate server parameters to scale up your analysis. Additionally, Nextflow inherently incorporates version control and containerization, which - as I told about in the previous posts - are true boosters of science reproducibility.</p>
+<p>A very useful function in Nextflow is the “resume” option. Imagine your pipeline runs into an error right after a computationally expensive calculation. After fixing the bug, “resume” allows you to re-run the fixed pipeline from where it stopped, skipping all unchanged steps and recovering their results from cache instead.</p>
 <div id="fig-id" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Nextflow_scheme.png" class="quarto-figure quarto-figure-center figure-img" style="width:80.0%;height:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages. Adapted from https://carpentries-incubator.github.io/workflows-nextflow/aio.html (last visit: 08/10/2025)
+Figure&nbsp;1: <strong>Basic Nextflow Architecture.</strong> Nextflow processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages. Adapted from https://carpentries-incubator.github.io/workflows-nextflow/aio.html (last visit: 08/10/2025)
 </figcaption>
 </figure>
 </div>
 </section>
 <section id="nf-core" class="level3">
 <h3 class="anchored" data-anchor-id="nf-core">nf-core</h3>
-<p>Building up on Nextflow, nf-core is a web-platform that provides curated &amp; ready-to-use bioinformatic pipelines. The platform is largely community-driven. Volunteers create and validate the provided pipelines (at the time of this post 139x) - the code is freely available on GitHub. Judging form my experience, most of the available pipelines are built for data processing tasks, while the focus lies less on downstream biological analyses. A very prominent use-case of nf-core is their rnaseq pipeline to generate count matrices form raw FASTQ files, including quality control vias FastQC.</p>
+<p>Building up on Nextflow, nf-core is a web-based platform that provides curated &amp; ready-to-use bioinformatic pipelines. The platform is largely community-driven. Volunteers create and validate the provided pipelines (at the time of this post, 139x pipelines are available) - the code is freely accessible on GitHub. Judging from my experience, most of the available pipelines are built for data processing tasks, while the focus lies less on downstream biological analyses. A very prominent use-case of nf-core is their “rnaseq” pipeline, which generates count matrices form raw FASTQ files, including quality control reports vias FastQC.</p>
 </section>
 </section>
 <section id="reflections" class="level2">

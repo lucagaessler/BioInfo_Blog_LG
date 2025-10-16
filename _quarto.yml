@@ -9,9 +9,9 @@ website:
   navbar:
     right:
       - icon: github
-        href: https://https://github.com/lucagaessler/BioInfo_Blog_LG
+        href: https://github.com/lucagaessler/BioInfo_Blog_LG
       - icon: linkedin
-        href: https://https://www.linkedin.com/in/luca-gaessler/
+        href: https://www.linkedin.com/in/luca-gaessler/
 format:
   html:
     theme: 

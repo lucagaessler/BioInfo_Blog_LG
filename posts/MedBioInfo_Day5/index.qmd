@@ -36,7 +36,7 @@ In a free coding exercise, we tried to re-create plots from popular publishers. 
 ::: {.callout-note}
 ## Disclaimer
 
-Font sizes were not adapted in our re-creation experiment since they have to be identified and downloaded beforehand. See the original figure on the left and my recreations on the right.
+Font sizes were not adapted in our recreation experiment since they have to be identified and downloaded beforehand. See the original figure on the left and my recreations on the right.
 :::
 
 (1) The Economist

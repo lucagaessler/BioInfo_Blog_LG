@@ -38,7 +38,7 @@
 <li>Coordinates</li>
 <li>Theme</li>
 </ul>
-<p>The essential code that an author has to provide for a ggplot looks as follows. The tool provides defaults (which of course can be changed) for the other layers:</p>
+<p>The essential code that an author has to provide for a ggplot is very simple and looks as follows. The tool provides defaults (which of course can be changed) for the other layers:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(data) <span class="sc" style="color: #5E5E5E;
@@ -48,7 +48,7 @@ font-style: inherit;">+</span></span>
 background-color: null;
 font-style: inherit;">geom_function</span>()</span></code></pre></div></div>
 <p>The aesthetics can then be defined for every geometric object individually or globally for the plot itself.</p>
-<p>In a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions.</p>
+<p>In a free coding exercise, we tried to re-create plots from popular publishers. This task showcased the immense versatility of ggplot2 and its extensions (material taken from the RaukR summer school 2023. Author: Roy Francis).</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -59,7 +59,7 @@ font-style: inherit;">geom_function</span>()</span></code></pre></div></div>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Font sizes were not adapted in our re-creation experiment.</p>
+<p>Font sizes were not adapted in our re-creation experiment since they have to be identified and downloaded beforehand. See the original figure on the left and my recreations on the right.</p>
 </div>
 </div>
 <ol type="1">
@@ -130,7 +130,7 @@ Figure&nbsp;4: <strong>Re-created Figure</strong>
 </section>
 <section id="reflections" class="level2">
 <h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
-<p>Although I have already been a frequent user of ggplot2 and its functionalities before the lecture, the theory behind it was interesting to hear and helped me better understand why I am doing the things I am doing. Re-creating published figures was an especially fun task!</p>
+<p>Although I am a frequent user of ggplot2 and its functionalities, the theory behind the tools was interesting to hear and helped me better understand why I am doing the things that I am doing. Re-creating the published figures was an especially fun task!</p>
 <p><strong>Thanks for reading!</strong></p>
 
 
@@ -139,7 +139,7 @@ Figure&nbsp;4: <strong>Re-created Figure</strong>
  ]]></description>
   <category>course</category>
   <category>medbioinfo</category>
-  <category>learning</category>
+  <category>ggplot</category>
   <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day5/</guid>
   <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
   <media:content url="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day5/figures/economist-scatterplot.png" medium="image" type="image/png" height="106" width="144"/>
@@ -162,20 +162,28 @@ Figure&nbsp;4: <strong>Re-created Figure</strong>
 </ul>
 <section id="running-a-nextflow-script" class="level3">
 <h3 class="anchored" data-anchor-id="running-a-nextflow-script">Running a Nextflow script</h3>
-<p>Today was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline quantifies the raw read files via Salmon and performs a subsequent quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - can be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!</p>
+<p>Today was all about hands-on experience in Nextflow. In this context, we ran an RNA-sequencing pipeline on real-world data. This pipeline works by quantifying the raw reads files via Salmon, followed by a quality control session using FastQC, whose reports are then summarized via the MultiQC tool. Here, the power of Nextflow comes into play. All of these functionalities - be it quantification, quality control and so on - could be replaced or complemented by any other tool of our choice in a modular fashion. These Nextflow process modules can even be written in a completely different programming language!</p>
 <p>Importantly, each process module has the following structure:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb1-1">process INDEX <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">{</span></span>
 <span id="cb1-2">    input<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">:</span></span>
+font-style: inherit;">:</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span>input<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
 <span id="cb1-3"></span>
 <span id="cb1-4">    optional container</span>
 <span id="cb1-5"></span>
 <span id="cb1-6">    output<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">:</span></span>
+font-style: inherit;">:</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span>output<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
 <span id="cb1-7"></span>
 <span id="cb1-8">    script<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -192,7 +200,7 @@ font-style: inherit;">    """</span></span>
 <span id="cb1-12"><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">}</span></span></code></pre></div></div>
-<p>These processes are then dynamically connected in a workflow scope. Here is a simplified example from our case above (each process in capital letters):</p>
+<p>These processes are then dynamically connected in a so-called workflow scope. Here is a simplified example from our analysis above (each process in capital letters):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb2-1">workflow <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">{</span></span>
@@ -256,7 +264,7 @@ font-style: inherit;">.</span>nf</span></code></pre></div></div>
 </section>
 <section id="running-an-nf-core-pipeline" class="level3">
 <h3 class="anchored" data-anchor-id="running-an-nf-core-pipeline">Running an nf-core pipeline</h3>
-<p>Of course, not every pipeline has to be written from scratch in Nextflow. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:</p>
+<p>Of course, not every Nextflow pipeline has to be written from scratch. A lot of the readers will be pleased to hear that the nf-core platform provides off-the-shelf pipelines for all sorts of bioinformatic processes. One of their most popular pipelines is the one for analysing RNAseq data:</p>
 <div id="fig-id" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -267,16 +275,16 @@ Figure&nbsp;1: <strong>nf-core RNAseq Pipeline.</strong> Schematic representatio
 </figcaption>
 </figure>
 </div>
-<p>We set up the pipeline via the instructions on the nf-core website, using the offline mode, and ran it on the high-performance cluster HPC2N. I can only recommend this approach, especially when dealing with large sample numbers: it is straight-forward, robust &amp; highly reproducible. In summary, if a pipeline exists for your purposes, do not hesitate to try it out.</p>
+<p>We set up the pipeline via the instructions on the nf-core website - using the offline mode - and ran it on the high-performance cluster HPC2N. I can only recommend this approach, especially when dealing with large sample numbers: it is straight-forward, robust, and highly reproducible. In summary, if an nf-core pipeline exists for your purposes, do not hesitate to try it out!</p>
 </section>
 </section>
 <section id="reflections" class="level2">
 <h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
-<p>For my thoughts on Nextflow and nf-core, please have a look at my previous post from the day before.</p>
+<p>For my thoughts on Nextflow and nf-core, please have a look at my previous post.</p>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>Tomorrow is the last course day with a ggplot2 session as well as the opportunity to provide feedback to the organizers.</p>
+<p>Tomorrow will be the last course day with a ggplot2 session as well as the opportunity to provide feedback to the organizers.</p>
 <p><strong>Thanks for reading!</strong></p>
 
 
@@ -285,7 +293,7 @@ Figure&nbsp;1: <strong>nf-core RNAseq Pipeline.</strong> Schematic representatio
  ]]></description>
   <category>course</category>
   <category>medbioinfo</category>
-  <category>learning</category>
+  <category>nf-core</category>
   <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day4/</guid>
   <pubDate>Thu, 09 Oct 2025 00:00:00 GMT</pubDate>
   <media:content url="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day4/nf-core-rnaseq_metro_map_grey.png" medium="image" type="image/png" height="60" width="144"/>
@@ -308,22 +316,22 @@ Figure&nbsp;1: <strong>nf-core RNAseq Pipeline.</strong> Schematic representatio
 </ul>
 <section id="nextflow" class="level3">
 <h3 class="anchored" data-anchor-id="nextflow">Nextflow</h3>
-<p>Nextflow is a tool to connect different parts of your analysis. While this might trigger reactions like “I can run my scripts myself” and “Nice to have”, the use of workflow managers is real and multifold. Nextflow scripts not only lower manual efforts, and thereby the possibility of human erros, but also enhance analytical scalability and reproducibility. When scripts are run over many samples, high-performance clusters are essential. When transferring scripts from local computers to clusters, Nexflow is a game-changer. It always keeps the functional logic of a workflow separate from its execution, meaning that you only have to exchange your local for appropriate server parameters to scale up your analysis. Additionally, Nextflow inherently incorporates version control and containerization, which - as I told about in the previous posts - are real boosters of science reproducibility.</p>
-<p>A very useful function in Nextflow is the “resume” option. Imagine your pipeline has a bug right after a computationally expensive calculation. After fixing the bug, “resume” allows you to re-run the now working pipeline but all unchanged steps are skipped and their results recovered from cache instead.</p>
+<p>Nextflow is a tool used to connect different parts of your analysis. While this might trigger reactions like “I can run my scripts myself!” and “This is more a nice-to-have!”, the use of workflow managers is real and multifold. Nextflow scripts not only lower manual efforts, and thereby reduce human error, but also enhance analytical scalability and reproducibility. When scripts are run over many samples, high-performance clusters are essential. When transferring scripts from local computers to clusters, Nexflow is a game-changer. It always keeps the functional logic of a workflow separate from its execution, meaning that you only have to exchange your local for appropriate server parameters to scale up your analysis. Additionally, Nextflow inherently incorporates version control and containerization, which - as I told about in the previous posts - are true boosters of science reproducibility.</p>
+<p>A very useful function in Nextflow is the “resume” option. Imagine your pipeline runs into an error right after a computationally expensive calculation. After fixing the bug, “resume” allows you to re-run the fixed pipeline from where it stopped, skipping all unchanged steps and recovering their results from cache instead.</p>
 <div id="fig-id" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/Nextflow_scheme.png" class="quarto-figure quarto-figure-center figure-img" style="width:80.0%;height:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-id-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages. Adapted from https://carpentries-incubator.github.io/workflows-nextflow/aio.html (last visit: 08/10/2025)
+Figure&nbsp;1: <strong>Basic Nextflow Architecture.</strong> Nextflow processes, which contain the executable scripts, are connected via channels that move the data along the workflow. Processes are modular and can therefore be written in different programming languages. Adapted from https://carpentries-incubator.github.io/workflows-nextflow/aio.html (last visit: 08/10/2025)
 </figcaption>
 </figure>
 </div>
 </section>
 <section id="nf-core" class="level3">
 <h3 class="anchored" data-anchor-id="nf-core">nf-core</h3>
-<p>Building up on Nextflow, nf-core is a web-platform that provides curated &amp; ready-to-use bioinformatic pipelines. The platform is largely community-driven. Volunteers create and validate the provided pipelines (at the time of this post 139x) - the code is freely available on GitHub. Judging form my experience, most of the available pipelines are built for data processing tasks, while the focus lies less on downstream biological analyses. A very prominent use-case of nf-core is their rnaseq pipeline to generate count matrices form raw FASTQ files, including quality control vias FastQC.</p>
+<p>Building up on Nextflow, nf-core is a web-based platform that provides curated &amp; ready-to-use bioinformatic pipelines. The platform is largely community-driven. Volunteers create and validate the provided pipelines (at the time of this post, 139x pipelines are available) - the code is freely accessible on GitHub. Judging from my experience, most of the available pipelines are built for data processing tasks, while the focus lies less on downstream biological analyses. A very prominent use-case of nf-core is their “rnaseq” pipeline, which generates count matrices form raw FASTQ files, including quality control reports vias FastQC.</p>
 </section>
 </section>
 <section id="reflections" class="level2">
@@ -341,7 +349,7 @@ Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which c
  ]]></description>
   <category>course</category>
   <category>medbioinfo</category>
-  <category>learning</category>
+  <category>nextflow</category>
   <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/</guid>
   <pubDate>Wed, 08 Oct 2025 00:00:00 GMT</pubDate>
   <media:content url="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day3/Nextflow_scheme.png" medium="image" type="image/png" height="83" width="144"/>
@@ -364,7 +372,7 @@ Figure&nbsp;1: <strong>Basic Nextflow Archictecture.</strong> Processes, which c
 </ul>
 <section id="coding-environments" class="level3">
 <h3 class="anchored" data-anchor-id="coding-environments">Coding Environments</h3>
-<p>Today’s session was all about reproducibility. How can we as computational biologists ensure that our tools always give the same results? This question becomes especially relevant when sharing code with collaborators, which might use different operating systems or have packages in different versions installed.</p>
+<p>Today’s session was all about reproducibility. How can we, as computational biologists, ensure that our tools always give the same results? This question becomes especially relevant when we share code with collaborators, which might use different operating systems or have packages installed in different versions.</p>
 <p>Coding environments like Pixi can help us not only to keep track of the tools and the versions that we use in our analyses but also to enforce them within the limits of a project. A Pixi-controlled environment covers one directory as well as its subdirectories, and is created similarly to a GitHub repository:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
 background-color: null;
@@ -375,7 +383,7 @@ background-color: null;
 font-style: inherit;">channel</span><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">]</span></span></code></pre></div></div>
-<p>By providing channels, i.e.&nbsp;the tool space that Pixi can choose from, we define where our packages are actually coming from. For example, we provided the Conda-Forge and Bioconda databases. Packages can then be easily installed and run using the following commands:</p>
+<p>By providing channels, i.e.&nbsp;the tool space that Pixi can choose from, we define where our packages are coming from. For example, we provided the Conda-Forge and Bioconda databases. Packages can then be easily installed and run using the following commands:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">pixi</span> add <span class="pp" style="color: #AD0000;
@@ -395,12 +403,12 @@ background-color: null;
 font-style: inherit;">command</span><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">]</span></span></code></pre></div></div>
-<p>Alternatively, the Pixi environment can also be accessed as its own shell.</p>
+<p>Alternatively, the Pixi environment can also be set up and accessed as its own shell.</p>
 </section>
 <section id="containerization" class="level3">
 <h3 class="anchored" data-anchor-id="containerization">Containerization</h3>
-<p>Containers work quite similarly to environments but isolate its content even more from the machine they are running on. Even the operating system can be different. This allows the users to apply different versions of one tool on their computer and ensures a high degree of reproducibility when sharing scripts and the corresponding container. Containers are stored and shared as “container images”, a type of metadata. These images can be conveniently downloaded from Websites like “docker.com” and then be used to build the actual container. Prominent examples container managment softwares are Docker, often used on individual computers, and Apptainer, often the tool of choice for Linux-based computer clusters.</p>
-<p>Containers can be run both from the inside (more for exploratory analyses) and the outside (once the workflow is established):</p>
+<p>Containers work quite similarly to environments like Pixi but isolate their content even more from the machine they are running on. Even the operating system can be different within the container. This allows the users to apply different versions of the same tool on one computer. Additionally, containers ensure a high degree of reproducibility when shared. They are stored and transferred as “container images”, a specific type of metadata. These images can be conveniently downloaded from Websites like “docker.com” and then be used to build the actual container. Prominent examples of container managment softwares are Docker, often used on individual computers, and Apptainer, which is often the tool of choice for Linux-based computer clusters.</p>
+<p>Containers can be run both from inside (suitable for exploratory analyses) and outside (once the workflow is established):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">apptainer</span> shell <span class="pp" style="color: #AD0000;
@@ -430,17 +438,17 @@ background-color: null;
 font-style: inherit;">]</span> <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#outside</span></span></code></pre></div></div>
-<p>It is possible to build your own container, giving you all the power over its operating system, dependencies, etc. Still, this task is often computationally extensive and in most cases, a suitable container with the desired tool is already available to download from the web.</p>
+<p>It is possible to build your own container, giving you all the power over its operating system, dependencies, versions, etc. On the other hand, this task is often computationally extensive and in most cases, a suitable container with the desired tool(s) is already available for download from the web.</p>
 </section>
 </section>
 <section id="reflections" class="level2">
 <h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
-<p>Naturally, there is no perfect solution among the two approaches and both have their Pros &amp; Cons. While environments like Pixi let you interact with outside directories more easily than containers, tools like Docker provide you with a higher degree of control over the conditions in which your analyses take place. In the end, it is all about finding a tool that balances outcome and effort according to the situation. The important part is to increase the reproducibility of your science, and both tools are a valuable addition for that.</p>
+<p>Naturally, there is no perfect solution among the two approaches and both have their Pros &amp; Cons. While environments like Pixi let you interact with outside directories more easily than containers, tools like Docker provide you with a higher degree of control over the conditions in which your analyses take place. In the end, it is all about finding a tool that balances outcome and effort according to the situation. The important part is to increase the reproducibility of your science, and both tools are a valuable addition to that.</p>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
 <p>Tomorrow will be all about bioinformatic pipelines and how to built them! Stay tuned for my next post, which will be about…</p>
-<p>Netxflow!</p>
+<p>Nextflow!</p>
 <p><strong>Thanks for reading!</strong></p>
 
 
@@ -449,7 +457,7 @@ font-style: inherit;">#outside</span></span></code></pre></div></div>
  ]]></description>
   <category>course</category>
   <category>medbioinfo</category>
-  <category>learning</category>
+  <category>Docker</category>
   <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day2/</guid>
   <pubDate>Tue, 07 Oct 2025 00:00:00 GMT</pubDate>
   <media:content url="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day2/docker-mark-blue.png" medium="image" type="image/png" height="114" width="144"/>
@@ -473,8 +481,8 @@ font-style: inherit;">#outside</span></span></code></pre></div></div>
 </ul>
 <section id="collaborating-in-github" class="level3">
 <h3 class="anchored" data-anchor-id="collaborating-in-github">Collaborating in GitHub</h3>
-<p>Today’s practical session was initiated by a group task. The goal was to create an ordered list of all participant’s names. An easy task at first but not if you consider the following rule: “Each student can only write their own name in a stand-alone file.”. This means that the course members had to collaborate on GitHub to merge their documents and handle potential conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on… The final workflow turned out to be less structured but we still managed to come up with the full list in the end.</p>
-<p>Merging the document looked as follows:</p>
+<p>Today’s practical session was initiated by a group task. The goal was to create an ordered list of all participants’ names. An easy task at first but not if you consider the following rule: “Each student can only write their own name in a stand-alone file.”. This means that the course members had to collaborate on GitHub to merge their documents and handle the resulting conflicts. The idea was to work in pairs, then collaborate with the merged list of another pair, and so on… The actual workflow turned out to be less structured but we still managed to come up with the full list in the end.</p>
+<p>Merging the documents always involved the following steps:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> pull <span class="co" style="color: #5E5E5E;
@@ -523,11 +531,11 @@ font-style: inherit;"># add changes to remote repository</span></span></code></p
 </section>
 <section id="quarto-blogs" class="level3">
 <h3 class="anchored" data-anchor-id="quarto-blogs">Quarto Blogs</h3>
-<p>Quarto has been developed for literate programming, meaning that it can combine code with markdown text. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, “Applied Bioinformatics”, in a blog format - one post for each day. Of course version-controlled via Git(Hub)!</p>
+<p>Quarto has been developed for literate programming, meaning that it can combine code with text in the markdown format. Quarto can be used to generate beautiful output documents, including the HTTP format for websites and blogs. To test its capabilities, each course member will follow along this course, “Applied Bioinformatics”, in a blog format - one post per day. Of course version-controlled via Git(Hub)!</p>
 </section>
 <section id="github-pages-actions" class="level3">
 <h3 class="anchored" data-anchor-id="github-pages-actions">GitHub Pages &amp; Actions</h3>
-<p>Each member set up his blog as a public website via GitHub Pages. Now whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions.</p>
+<p>Each member set up his or her blog as a public website via GitHub Pages. Now, whenever local changes are pushed to the remote repository, GitHub will re-build the website, thereby updating its contents. This functionality is provided by GitHub Actions.</p>
 </section>
 </section>
 <section id="reflections" class="level2">
@@ -536,7 +544,7 @@ font-style: inherit;"># add changes to remote repository</span></span></code></p
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>Next, I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!</p>
+<p>I am particularly interested in concepts regarding containerization as well as pipeline building. In the context of this course, tools for both (Docker, Nextflow) will be highlighted in the upcoming days!</p>
 <p><strong>Thanks for reading!</strong></p>
 
 
@@ -545,7 +553,7 @@ font-style: inherit;"># add changes to remote repository</span></span></code></p
  ]]></description>
   <category>course</category>
   <category>medbioinfo</category>
-  <category>learning</category>
+  <category>GitHub</category>
   <guid>https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day1/</guid>
   <pubDate>Mon, 06 Oct 2025 16:00:00 GMT</pubDate>
   <media:content url="https://lucagaessler.github.io/BioInfo_Blog_LG/posts/MedBioInfo_Day1/GitHub_Invertocat_Dark.png" medium="image" type="image/png" height="142" width="144"/>

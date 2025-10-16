@@ -160,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                           <div class="quarto-categories">
                 <div class="quarto-category">course</div>
                 <div class="quarto-category">medbioinfo</div>
-                <div class="quarto-category">learning</div>
+                <div class="quarto-category">Docker</div>
               </div>
                   </div>
   </div>
@@ -205,33 +205,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="coding-environments" class="level3">
 <h3 class="anchored" data-anchor-id="coding-environments">Coding Environments</h3>
-<p>Today’s session was all about reproducibility. How can we as computational biologists ensure that our tools always give the same results? This question becomes especially relevant when sharing code with collaborators, which might use different operating systems or have packages in different versions installed.</p>
+<p>Today’s session was all about reproducibility. How can we, as computational biologists, ensure that our tools always give the same results? This question becomes especially relevant when we share code with collaborators, which might use different operating systems or have packages installed in different versions.</p>
 <p>Coding environments like Pixi can help us not only to keep track of the tools and the versions that we use in our analyses but also to enforce them within the limits of a project. A Pixi-controlled environment covers one directory as well as its subdirectories, and is created similarly to a GitHub repository:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> init <span class="pp">[</span><span class="ss">channel</span><span class="pp">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>By providing channels, i.e.&nbsp;the tool space that Pixi can choose from, we define where our packages are actually coming from. For example, we provided the Conda-Forge and Bioconda databases. Packages can then be easily installed and run using the following commands:</p>
+<p>By providing channels, i.e.&nbsp;the tool space that Pixi can choose from, we define where our packages are coming from. For example, we provided the Conda-Forge and Bioconda databases. Packages can then be easily installed and run using the following commands:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add <span class="pp">[</span><span class="ss">package</span><span class="pp">]</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> run <span class="pp">[</span><span class="ss">command</span><span class="pp">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Alternatively, the Pixi environment can also be accessed as its own shell.</p>
+<p>Alternatively, the Pixi environment can also be set up and accessed as its own shell.</p>
 </section>
 <section id="containerization" class="level3">
 <h3 class="anchored" data-anchor-id="containerization">Containerization</h3>
-<p>Containers work quite similarly to environments but isolate its content even more from the machine they are running on. Even the operating system can be different. This allows the users to apply different versions of one tool on their computer and ensures a high degree of reproducibility when sharing scripts and the corresponding container. Containers are stored and shared as “container images”, a type of metadata. These images can be conveniently downloaded from Websites like “docker.com” and then be used to build the actual container. Prominent examples container managment softwares are Docker, often used on individual computers, and Apptainer, often the tool of choice for Linux-based computer clusters.</p>
-<p>Containers can be run both from the inside (more for exploratory analyses) and the outside (once the workflow is established):</p>
+<p>Containers work quite similarly to environments like Pixi but isolate their content even more from the machine they are running on. Even the operating system can be different within the container. This allows the users to apply different versions of the same tool on one computer. Additionally, containers ensure a high degree of reproducibility when shared. They are stored and transferred as “container images”, a specific type of metadata. These images can be conveniently downloaded from Websites like “docker.com” and then be used to build the actual container. Prominent examples of container managment softwares are Docker, often used on individual computers, and Apptainer, which is often the tool of choice for Linux-based computer clusters.</p>
+<p>Containers can be run both from inside (suitable for exploratory analyses) and outside (once the workflow is established):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> shell <span class="pp">[</span><span class="ss">container</span><span class="pp">]</span> <span class="co">#inside</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> exec <span class="pp">[</span><span class="ss">container</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">command</span><span class="pp">]</span> <span class="co">#outside</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It is possible to build your own container, giving you all the power over its operating system, dependencies, etc. Still, this task is often computationally extensive and in most cases, a suitable container with the desired tool is already available to download from the web.</p>
+<p>It is possible to build your own container, giving you all the power over its operating system, dependencies, versions, etc. On the other hand, this task is often computationally extensive and in most cases, a suitable container with the desired tool(s) is already available for download from the web.</p>
 </section>
 </section>
 <section id="reflections" class="level2">
 <h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
-<p>Naturally, there is no perfect solution among the two approaches and both have their Pros &amp; Cons. While environments like Pixi let you interact with outside directories more easily than containers, tools like Docker provide you with a higher degree of control over the conditions in which your analyses take place. In the end, it is all about finding a tool that balances outcome and effort according to the situation. The important part is to increase the reproducibility of your science, and both tools are a valuable addition for that.</p>
+<p>Naturally, there is no perfect solution among the two approaches and both have their Pros &amp; Cons. While environments like Pixi let you interact with outside directories more easily than containers, tools like Docker provide you with a higher degree of control over the conditions in which your analyses take place. In the end, it is all about finding a tool that balances outcome and effort according to the situation. The important part is to increase the reproducibility of your science, and both tools are a valuable addition to that.</p>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
 <p>Tomorrow will be all about bioinformatic pipelines and how to built them! Stay tuned for my next post, which will be about…</p>
-<p>Netxflow!</p>
+<p>Nextflow!</p>
 <p><strong>Thanks for reading!</strong></p>
 
 
